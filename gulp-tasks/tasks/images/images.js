@@ -113,6 +113,7 @@ module.exports = () => {
           withMetadata: false,
           compressionLevel: 8,
         })))
+      .pipe(faviconFilter.restore)  
       .pipe(G.gulp.dest('dist/images/'))
 
   })

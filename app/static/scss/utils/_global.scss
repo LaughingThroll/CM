@@ -59,7 +59,8 @@ a {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	position: relative;
+	height: 100vh;
 	overflow-x: hidden;
 }
 .content {
@@ -68,8 +69,29 @@ a {
 .footer {
 	flex: 0 0 auto;
 }
-.container {
-	max-width: 1170px;
+.container-fluid {
+	max-width: 1800px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+.container {
+	max-width: 1460px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.coll-number {
+	color: $main-color;
+	line-height: 30px;
+	display: inline-block;
+	width: 60px;
+}
+.row {
+	display: flex;
+	&:first-child {
+		margin-bottom: rem(40px);
+	}
+	&:last-child {
+		align-items: flex-end;
+	}
 }

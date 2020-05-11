@@ -3,9 +3,11 @@ html(lang="en")
   include ../utils/_head.pug
   
   body
-    .wrapper
-      .content
-        include ../modules/header/_header.pug
-        block content
-
-      include ../modules/footer/_footer.pug      
+    .wrapper  
+      main.content
+        .container-fluid  
+          include ../modules/header/_header.pug
+          block content
+          
+      .container-fluid
+        include ../modules/footer/_footer.pug      

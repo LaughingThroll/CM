@@ -41,6 +41,6 @@ G.config.src.forEach(task => {
 });
 
 
-G.gulp.task('default', G.gulp.parallel('styleLibs', 'export:fonts', 'sass', 'watch', 'browser-sync', 'clean:images','pug', 'webpackJs', 'export:images'))
+G.gulp.task('default', G.gulp.parallel('styleLibs', 'export:fonts', 'sass', 'watch', 'browser-sync', 'clean:images', 'pug', 'webpackJs', 'export:images'))
 
 G.gulp.task('build', G.gulp.parallel('clean', 'export:fonts','styleLibs', 'sass', 'pug', 'webpackJs', 'export:images'))

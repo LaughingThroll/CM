@@ -1,0 +1,26 @@
+include ./../../mixins/_model-item.pug
+include ./../../mixins/_model-list-item.pug
+
+section.main-collections  
+  .container
+    .main-collections__inner
+      .row  
+        +model('background-image: url(images/content/анна_филина/__1.jpg); background-image: image-set(url(images/content/анна_филина/__1x1.jpg) 1x, url(images/content/анна_филина/__1x2.jpg) 2x, url(images/content/анна_филина/__1x3.jpg) 3x);', 1, 'Анна Филина')
+        +model('background-image: url(images/content/анастасия_никитина/__1.jpg); background-image: image-set(url(images/content/анастасия_никитина/__1x1.jpg) 1x, url(images/content/анастасия_никитина/__1x2.jpg) 2x, url(images/content/анастасия_никитина/__1x3.jpg) 3x);', 2, 'Анастасия Никитина')
+        ul.model-list.model-list--left
+          +model-list-item(3, 'Яна Полифилова')
+          +model-list-item(4, 'Яна Полифилова')
+          +model-list-item(5, 'Яна Полифилова')
+          +model-list-item(6, 'Яна Полифилова')
+          +model-list-item(7, 'Яна Полифилова')
+          +model-list-item(8, 'Яна Полифилова')
+      .row    
+        ul.model-list.model-list--right 
+          +model-list-item(9,  'Яна Полифилова')
+          +model-list-item(10, 'Яна Полифилова')
+          +model-list-item(11, 'Яна Полифилова')
+          +model-list-item(12, 'Яна Полифилова')
+          +model-list-item(13, 'Яна Полифилова') 
+          +model-list-item(14, 'Яна Полифилова')
+        +model('background-image: url(images/content/виктория_монастырская/__1.jpg); background-image: image-set(url(images/content/виктория_монастырская/__1x1.jpg) 1x, url(images/content/виктория_монастырская/__1x2.jpg) 2x, url(images/content/виктория_монастырская/__1x3.jpg) 3x);', 1, 'виктория монастырская')
+        +model('background-image: url(images/content/яна_полифилова/__2.jpg); background-image: image-set(url(images/content/яна_полифилова/__2x1.jpg) 1x, url(images/content/яна_полифилова/__2x2.jpg) 2x, url(images/content/яна_полифилова/__2x3.jpg) 3x);', 2, 'яна полифилова')    

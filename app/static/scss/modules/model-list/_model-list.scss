@@ -1,0 +1,37 @@
+.model-list {
+  &--left {
+    margin-left: rem(175px);
+  }
+  &--right {
+    margin-right: auto;
+  
+  }
+  li {
+    margin-bottom: rem(15px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    position: relative;
+    width: 100%;
+    padding-right: rem(100px);
+    &::before {
+      font-family: 'icomoon';
+      font-size: 1.57143rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '\e900';
+      color: #a9a9a9;
+    }
+  }
+  &__number {
+    letter-spacing: -.4px;
+    margin-right: rem(70px);
+  }
+  &__title {
+    color: $black; 
+    letter-spacing: -.4px;
+  }
+}

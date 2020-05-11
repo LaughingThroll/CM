@@ -1,1 +1,11 @@
-// @include icomoon('../../fonts','u8bcog');
+@include font-face('../../fonts', 'AGaramondPro-Italic');
+@include font-face('../../fonts', 'AGaramondPro-Regular');
+@include font-face('../../fonts', 'Arial-Regular');
+@include icomoon('../../fonts', 'gdhs90');
+
+.icon-plus1:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e900";
+}

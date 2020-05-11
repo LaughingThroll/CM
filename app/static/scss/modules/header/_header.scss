@@ -1,0 +1,10 @@
+.header {
+  padding-top: rem(20px);
+  text-align: center;
+  &__logo {
+    svg {
+      display: block;
+      margin: 5px auto;
+    }
+  }
+}
