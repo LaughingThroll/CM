@@ -1,0 +1,25 @@
+// All color 
+$main-color: 14px;
+
+$white: #fff;
+$black: #000;
+
+
+
+
+// All Font 
+$main-font: '';
+// + or - size * on number [.5, .75, 1.25, 1.5]
+$main-fz: 14px;
+
+// h1-h6
+h1 {font-size: rem(42px);}
+h2 {font-size: rem(32px);}
+h3 {font-size: rem(28px);}
+h4 {font-size: rem(22px);}
+h5 {font-size: rem(18px);}
+h6 {font-size: rem(16px);}
+
+@function rem($pixels, $context: $main-fz) {
+  @return ($pixels/$context)rem;
+}
