@@ -1,12 +1,12 @@
 include ./../../mixins/_model-item.pug
 include ./../../mixins/_model-list-item.pug
-
-section.main-collections  
+//- './annaFilina.html' './anastasiaNikitina.html' './victoriaMonastyrskaya.html' './yanaPolifilova.html' 
+section.main-collections   
   .container
     .main-collections__inner
       .row  
-        +model('background-image: url(images/content/анна_филина/__1.jpg); background-image: image-set(url(images/content/анна_филина/__1x1.jpg) 1x, url(images/content/анна_филина/__1x2.jpg) 2x, url(images/content/анна_филина/__1x3.jpg) 3x);', 1, 'Анна Филина')
-        +model('background-image: url(images/content/анастасия_никитина/__1.jpg); background-image: image-set(url(images/content/анастасия_никитина/__1x1.jpg) 1x, url(images/content/анастасия_никитина/__1x2.jpg) 2x, url(images/content/анастасия_никитина/__1x3.jpg) 3x);', 2, 'Анастасия Никитина')
+        +model('background-image: url(images/content/анна_филина/__1.jpg); background-image: image-set(url(images/content/анна_филина/__1x1.jpg) 1x, url(images/content/анна_филина/__1x2.jpg) 2x, url(images/content/анна_филина/__1x3.jpg) 3x);', 1, 'Анна Филина', './annaFilina.html') 
+        +model('background-image: url(images/content/анастасия_никитина/__1.jpg); background-image: image-set(url(images/content/анастасия_никитина/__1x1.jpg) 1x, url(images/content/анастасия_никитина/__1x2.jpg) 2x, url(images/content/анастасия_никитина/__1x3.jpg) 3x);', 2, 'Анастасия Никитина')  
         ul.model-list.model-list--left
           +model-list-item(3, 'Яна Полифилова')
           +model-list-item(4, 'Яна Полифилова')

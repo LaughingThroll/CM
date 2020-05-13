@@ -4,10 +4,9 @@ html(lang="en")
   
   body
     .wrapper  
-      main.content
-        .container-fluid  
-          include ../modules/header/_header.pug
-          block content
+      main.content  
+        include ../modules/header/_header.pug
+          //- #content
+        block content
           
-      .container-fluid
-        include ../modules/footer/_footer.pug      
+      include ../modules/footer/_footer.pug      

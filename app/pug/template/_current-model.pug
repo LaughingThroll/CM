@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html(lang="en")
+  include ../utils/_head.pug
+  body 
+    .wrapper.model-page  
+      main.content
+        include ../modules/header/_header.pug
+        section.current-model
+          .container
+            .current-model__inner
+              .current-model__slider.swiper-container 
+                .swiper-wrapper
+                  block items   
+              .current-model__pagination              
+              button(type="button").current-model__arrow.current-model__arrow-prev Prev
+              button(type="button").current-model__arrow.current-model__arrow-next Next
+      include ../modules/footer/_footer.pug   
