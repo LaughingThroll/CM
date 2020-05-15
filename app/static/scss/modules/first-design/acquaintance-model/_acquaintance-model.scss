@@ -1,0 +1,141 @@
+.acquaintance-model {
+  display: flex;
+  &__content {
+    padding: rem(50px) 0;
+    flex: 0 1 60%;
+  }
+  &__images {
+    padding: rem(100px) 0 0;
+    flex: 1 1 40%;
+    text-align: center;
+    position: relative;
+    .img {
+      position: absolute;
+      bottom: 60px;
+      left: -150px;
+      width: 125%;
+      min-height: 430px;
+    }
+  }
+}
+.acquaintance-model__headline {
+  position: relative;
+  display: inline-block;
+  a {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    font-size: rem(20px);
+    color: $main-color;
+  }
+}
+
+.acquaintance-model__about {
+  margin-top: rem(115px);
+  &-list {
+    li {
+      // padding-left: 110px;
+      font-size: rem(16px);
+      position: relative;
+      span {
+        color: darken($main-grey, 30);
+      }
+      & + li {
+        margin-top: 5px;
+      }
+      // идея такая чтобы динамически высчитывать размер линии и паддинг для li в зависимости от парметров
+      &:first-child {
+        padding-left: 110px;
+      }
+      &:first-child::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 100px;
+        background-color: $black;
+      }
+      &:nth-child(2) {
+        padding-left: 95px;
+      }
+      &:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 85px;
+        background-color: $black;
+      }
+      &:nth-child(3) {
+        padding-left: 70px;
+      }
+      &:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 60px;
+        background-color: $black;
+      }
+      &:nth-child(4) {
+        padding-left: 100px;
+      }
+      &:nth-child(4)::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 90px;
+        background-color: $black;
+      }
+      &:nth-child(5) {
+        padding-left: 130px;
+      }
+      &:nth-child(5)::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 120px;
+        background-color: $black;
+      }
+      &:nth-child(6) {
+        padding-left: 60px;
+      }
+      &:nth-child(6)::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 50px;
+        background-color: $black;
+      }
+    }
+  }
+}
+.acquaintance-model__about-descr {
+  max-width: 500px;
+  padding-top: rem(10px);
+  margin: rem(50px) 170px 0 auto;
+  font-size: rem(20px);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    height: 1px;
+    width: 100%;
+    background-color: $main-color;
+  }
+}
+.acquaintance-model__socials {
+  display: inline-block;
+  margin-top: 12%;
+}

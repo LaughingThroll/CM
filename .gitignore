@@ -3,4 +3,5 @@
 .LSOverride
 .vscode
 
+app/static/infoForModels.txt
 node_modules

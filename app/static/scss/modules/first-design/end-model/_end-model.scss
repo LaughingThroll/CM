@@ -1,0 +1,49 @@
+.end-model {
+  padding: rem(50px) 0 0;
+  &__headline {
+    margin-bottom: 10px;
+    &-descr {
+      max-width: 400px;
+      height: 90px;
+      overflow: hidden;
+    }
+  }
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  &__item {
+    flex: 1 1 33.3333%;
+    & + .end-model__item {
+      margin-left: 50px;
+    }
+  }
+  &__images {
+    flex: 0 1 20%;
+    .img {
+      min-height: 450px;
+    }
+  }
+  &__socials {
+    margin: 0 0 6% 5%;
+    align-self: flex-end;
+  }
+  &__contacts {
+    &-title {
+      margin-bottom: rem(20px);
+    }
+    &-list {
+      margin-bottom: 10px;
+      li + li {
+        margin-top: 10px;
+      }
+    }
+    a {
+      // font-size: rem(16px);
+      color: $main-color;
+    }
+    
+  }
+}

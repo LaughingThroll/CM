@@ -1,6 +1,7 @@
 @import 'utils/vars';
 @import 'utils/mixin';
 @import 'utils/fonts';
+@import 'utils/animation';
 @import 'utils/global';
 
 @import 'modules/header/header';
@@ -12,6 +13,13 @@
 @import 'modules/model-item/model-item';
 @import 'modules/model-list/model-list';
 
+
+
+@import 'modules/first-design/first-design-model/first-design-model';
+@import 'modules/first-design/acquaintance-model/acquaintance-model';
+@import 'modules/first-design/best-photo-model/best-photo-model';
+@import 'modules/first-design/portfolio-model/portfolio-model';
+@import 'modules/first-design/end-model/end-model';
 
 
 @import 'utils/media';

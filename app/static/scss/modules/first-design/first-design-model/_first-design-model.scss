@@ -1,0 +1,123 @@
+.current-model {
+  &__slider {
+    height: calc(100vh - 130px);
+  }
+  &__inner {
+    position: relative;
+    padding-right: 70px;
+  }
+  &-item {
+    overflow: hidden;
+  }
+  &__arrow {
+    position: absolute;
+    top: -45px;
+    font-size: rem(24px);
+    color: $main-grey;
+    z-index: 10;
+    text-transform: lowercase;
+    outline: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      width: 72px;
+      background-color: $main-grey;
+    }
+    &-prev {
+      padding-left: 80px;
+      left: 0;
+      &::before {
+        left: 0;
+      }
+    }
+    &-next {
+      padding-right: 80px;
+      right: 0;
+      &::before {
+        right: 0;
+      }
+    }
+  }
+  &__pagination {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    transform: translateY(-50%);
+    &-dot {
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      position: realtive;
+      padding: 10px 0;
+      transition: font-size 0.3s ease-in;
+      &::before,
+      &::after {
+        content: "";
+        height: 0;
+        transition: all 0.5s ease-in;
+      }
+      & + .current-model__pagination-dot {
+        margin-top: 20px;
+      }
+      &.current-model__pagination-dot--active {
+        margin-top: 90px;
+        margin-bottom: 70px;
+      }
+      &:first-child {
+        margin-top: 0;
+        &::before {
+          display: none;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+        &::after {
+          display: none;
+        }
+      }
+      &:first-child.current-model__pagination-dot--active {
+        margin-bottom: 70px;
+      }
+      &:last-child.current-model__pagination-dot--active {
+        margin-top: 90px;
+      }
+      &--active {
+        position: relative;
+        font-size: rem(48px);
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          height: rem(100px);
+
+          width: 1px;
+          background-color: $black;
+        }
+        &::before {
+          bottom: 65px;
+        }
+        &::after {
+          top: 60px;
+        }
+      }
+    }
+  }
+  // span {
+  //   position: relative;
+  //   &::before {
+  //     content: '';
+  //     position: absolute;
+  //     bottom: -3px;
+  //     left: 0;
+  //     height: 1px;
+  //     width: 100%;
+  //     background-color: $main-grey;
+  //   }
+  // }
+}

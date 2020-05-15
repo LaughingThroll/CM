@@ -15,6 +15,7 @@
   a {
     position: relative;
     width: 100%;
+    font-size: rem(14px);
     padding-right: rem(100px);
     &::before {
       font-family: 'icomoon';

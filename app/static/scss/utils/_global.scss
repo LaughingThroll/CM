@@ -79,10 +79,15 @@ a {
 	padding: 0 15px;
 	margin: 0 auto;
 }
-
+.img {
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
 .coll-number {
-	color: $main-color;
+	color: $main-grey;
 	line-height: 30px;
+	font-size: rem(14px);
 	display: inline-block;
 	width: 60px;
 }
@@ -94,4 +99,119 @@ a {
 	&:last-child {
 		align-items: flex-end;
 	}
+}
+//  попробовать это генерировать через JS сложность в том чтобы добраться до псевдоелементов getComputedStyle и нужно ли это генерировать с JS ??
+.model-page {
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		height: 0;
+		width: 0;
+		transition: all 3s ease;
+	}
+	&::before {
+		background-color: $main-blue;
+		
+	}
+	&::after {
+		background-color: $main-pink;
+		
+	}
+	&--vertical {
+		&::before,
+		&::after {
+			top: 0;
+			height: 100%;
+			width: 50%;
+			animation: defaultParties 1s ease-in forwards;
+			// transition: all 3s ease;
+			
+		}
+		&::before {
+			right: 0;
+			transform: translateX(100%);
+		}
+		&::after {
+			left: 0;
+			transform: translateX(-100%);
+		}
+	}
+	&--horizontal {
+		&::before,
+		&::after {
+			left: 0;
+			height: 50%;
+			width: 100%;
+			transition: all 3s ease;
+		}
+		&::before {
+			bottom: 0;
+			
+		}
+		&::after {
+			top: 0;
+		}
+	}
+	&--horizontal-mode-1 {
+		&::before,
+		&::after {
+			left: 0;
+			width: 100%;
+		}
+		&::before {
+			bottom: 0;
+			height: 80%;
+		}
+		&::after {
+			top: 0;
+			height: 20%;
+		}
+	}
+	&--horizontal-mode-2 {
+		&::before,
+		&::after {
+			left: 0;
+			width: 100%;
+		}
+		&::before {
+			bottom: 0;
+			height: 20%;
+		}
+		&::after {
+			top: 0;
+			height: 80%;
+		}
+	}
+	
+}
+
+.model-socials {
+	li {
+    display: inline-block;
+    & + li {
+      margin-left: 15px;
+    }
+    a {
+      color: $main-color;
+      padding: 3px;
+      font-size: (18px);
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        right: 0;
+        height: 1px;
+        width: 0;
+        background-color: $main-color;
+        transition: all 0.3s ease-out;
+      }
+      &:hover::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
 }
