@@ -1,0 +1,53 @@
+.end-model-0001 {
+  padding: rem(20px) 0 0;
+  &__headline {
+    text-align: right;
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-title {
+      margin-right: 50px;
+    }
+    &-descr {
+      text-align: left;
+      max-width: 500px;   
+      margin-left: 50px;
+    }
+    .img {
+      margin: 40px 80px 0 0;
+      max-width: 700px;
+      width: 100%;
+      min-height: 400px;
+    }
+    .end-model-0001__socials {
+      margin-top: 30px;
+    }
+  }
+  &-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 650px;
+    width: 100%;
+    min-height: 340px;
+  }
+}
+.end-model-0001__socials {
+  text-align: left;
+}
+.end-model-0001__contacts { 
+  margin-top: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  text-align: left; 
+  &-title {
+    margin-bottom: 5px;
+  } 
+  &-list {
+    li {
+      margin-bottom: 5px;
+    }
+    
+  }
+}

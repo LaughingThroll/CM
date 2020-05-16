@@ -1,0 +1,14 @@
+.portfolio-model-0001 {
+  padding: rem(10px) 0 0;
+  &__title {
+    margin-left: rem(100px);
+  }
+  &__gallery {
+    margin-top: 20px;
+    .img {
+      margin-bottom: 3px;
+      flex: 0 1 calc(25% - 3px);
+      min-height: 280px;
+    }
+  }
+}

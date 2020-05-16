@@ -1,13 +1,11 @@
 .current-model {
   &__slider {
     height: calc(100vh - 130px);
+    overflow: visible;
   }
   &__inner {
     position: relative;
     padding-right: 70px;
-  }
-  &-item {
-    overflow: hidden;
   }
   &__arrow {
     position: absolute;

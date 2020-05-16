@@ -12,7 +12,6 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    
   }
   &__item {
     flex: 1 1 33.3333%;
@@ -35,15 +34,9 @@
       margin-bottom: rem(20px);
     }
     &-list {
-      margin-bottom: 10px;
-      li + li {
-        margin-top: 10px;
+      li {
+        margin-bottom: 10px;
       }
     }
-    a {
-      // font-size: rem(16px);
-      color: $main-color;
-    }
-    
   }
 }

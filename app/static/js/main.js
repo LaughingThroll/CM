@@ -17,7 +17,7 @@ const configSwiper = {
     bulletActiveClass: 'current-model__pagination-dot--active'
   },
   direction: 'vertical',
-  // autoHeight: true
+  spaceBetween: 150,	
 }
 
 isNull(currentModel, () => new Swiper(currentModel, configSwiper))

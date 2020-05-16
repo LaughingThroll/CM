@@ -9,17 +9,24 @@
 
 
 @import 'modules/link/link';
+
 @import 'modules/main-collections/main-collections';
 @import 'modules/model-item/model-item';
 @import 'modules/model-list/model-list';
 
 
 
-@import 'modules/first-design/first-design-model/first-design-model';
+@import 'modules/current-design-model/current-design-model';
 @import 'modules/first-design/acquaintance-model/acquaintance-model';
 @import 'modules/first-design/best-photo-model/best-photo-model';
 @import 'modules/first-design/portfolio-model/portfolio-model';
 @import 'modules/first-design/end-model/end-model';
+
+@import 'modules/second-design/acquaintance-model-0001/acquaintance-model-0001';
+@import 'modules/second-design/best-photo-model-0001/best-photo-model-0001';
+@import 'modules/second-design/portfolio-model-0001/portfolio-model-0001';
+@import 'modules/second-design/end-model-0001/end-model-0001';
+
 
 
 @import 'utils/media';

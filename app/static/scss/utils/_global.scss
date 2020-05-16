@@ -61,7 +61,7 @@ a {
 	flex-direction: column;
 	position: relative;
 	height: 100vh;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 .content {
 	flex: 1 0 auto;
@@ -100,6 +100,7 @@ a {
 		align-items: flex-end;
 	}
 }
+
 //  попробовать это генерировать через JS сложность в том чтобы добраться до псевдоелементов getComputedStyle и нужно ли это генерировать с JS ??
 .model-page {
 	&::before,
@@ -111,14 +112,26 @@ a {
 		width: 0;
 		transition: all 3s ease;
 	}
-	&::before {
-		background-color: $main-blue;
-		
+	&-0000 {
+		&::before {
+			background-color: $main-blue;  
+		}
+		&::after {
+			background-color: $main-pink;
+		}
 	}
-	&::after {
-		background-color: $main-pink;
-		
+	// colors on different design
+	&-0001 {
+		&::before {
+			background-color: $second-green;
+			
+		}
+		&::after {
+			background-color: $second-pink;
+			
+		}
 	}
+	// end
 	&--vertical {
 		&::before,
 		&::after {
@@ -186,6 +199,16 @@ a {
 	}
 	
 }
+.phone {
+	font-size: rem(20px);
+  color: $main-color;
+}
+
+.gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 
 .model-socials {
 	li {
@@ -214,4 +237,99 @@ a {
       }
     }
   }
+}
+
+.about-descr {
+	max-width: 500px;
+	font-size: rem(20px);
+}
+
+.about-model-list {
+	li {
+		// padding-left: 110px;
+		font-size: rem(16px);
+		position: relative;
+		// transform: rotateY(360deg);
+		// unicode-bidi:bidi-override;
+  	// direction:rtl;
+		span {
+			color: darken($main-grey, 30);
+		}
+		& + li {
+			margin-top: 5px;
+		}
+		// идея такая чтобы динамически высчитывать размер линии и паддинг для li в зависимости от парметров
+		&:first-child {
+			padding-left: 110px;
+		}
+		&:first-child::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 100px;
+			background-color: $black;
+		}
+		&:nth-child(2) {
+			padding-left: 95px;
+		}
+		&:nth-child(2)::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 85px;
+			background-color: $black;
+		}
+		&:nth-child(3) {
+			padding-left: 70px;
+		}
+		&:nth-child(3)::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 60px;
+			background-color: $black;
+		}
+		&:nth-child(4) {
+			padding-left: 100px;
+		}
+		&:nth-child(4)::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 90px;
+			background-color: $black;
+		}
+		&:nth-child(5) {
+			padding-left: 130px;
+		}
+		&:nth-child(5)::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 120px;
+			background-color: $black;
+		}
+		&:nth-child(6) {
+			padding-left: 60px;
+		}
+		&:nth-child(6)::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 50px;
+			background-color: $black;
+		}
+	}
 }

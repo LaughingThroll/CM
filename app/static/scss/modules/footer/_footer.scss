@@ -1,4 +1,6 @@
 .footer {
+  z-index: 12;
+  text-align: center;
   &__inner {
     display: flex;
     justify-content: space-between;
