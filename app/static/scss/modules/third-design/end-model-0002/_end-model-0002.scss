@@ -1,0 +1,37 @@
+.end-model-0002 {
+  display: flex;
+  .img {
+    flex: 0 1 50%;
+    min-height: 700px;
+  }
+  &__inner {
+    flex: 0 1 50%;
+    margin-left: rem(30px);
+  }
+  &__headline {
+    margin-bottom: rem(20px);
+    &-title {
+      margin-bottom: rem(20px);
+    }
+    &-descr {
+      font-size: rem(20px);
+      height: 200px;
+      overflow: hidden;
+      
+    }
+  }
+  &__socials {
+    margin-bottom: rem(80px);
+  }
+  &__contacts {
+    &-title {
+      margin-bottom: rem(10px);
+    }
+    &-list {
+      li + li {
+        margin-top: rem(10px);
+      }
+      
+    }
+  }
+}

@@ -2,7 +2,7 @@
   padding: rem(40px) 0;
   position: relative;
   &::before {
-    content: 'Catalogue';
+    content: "Catalogue";
     position: absolute;
     top: 0;
     left: 0;
@@ -10,9 +10,17 @@
     height: 100%;
     font-size: rem(387px);
     color: $main-pink;
-    // transform: translateX();
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .row:last-child {
+    .model-item:nth-child(2) {
+      .img {
+        background-position: -120px 0;   
+      }
+    }    
+   
   }
 }

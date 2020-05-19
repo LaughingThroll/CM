@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+  include ../utils/_head.pug
+  body 
+    .wrapper.model-page.model-page-0002.model-page--horizontal-mode-2        
+      main.content
+        include ../modules/header/_header.pug    
+        section.current-model  
+          .container
+            .current-model__inner
+              .current-model__slider.swiper-container 
+                .swiper-wrapper  
+                  block items   
+              .current-model__pagination              
+              button(type="button").current-model__arrow.current-model__arrow-prev Prev
+              button(type="button").current-model__arrow.current-model__arrow-next Next
+      footer.footer
+        .container
+          .footer__inner    
+            a.see-link.see-link--open(href="#") See All
+            .footer-collection__title Collection № 3          
+                     

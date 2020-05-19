@@ -1,0 +1,23 @@
+.acquaintance-model-0002 {
+  display: flex;
+  &__about {
+    position: relative;
+    &-descr {
+      margin-bottom: rem(100px);
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 30%;
+        left: 5%;
+        height: 1px;
+        width: 91%;
+        background-color: $black;
+      }
+    }
+  }
+  .img {
+    max-width: 550px;
+    width: 100%;
+    min-height: 700px;
+  }
+}

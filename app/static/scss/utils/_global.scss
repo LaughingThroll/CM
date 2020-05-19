@@ -27,6 +27,7 @@ h6,
 p {
 	margin: 0;
 	padding: 0;
+	text-transform: capitalize;
 }
 
 input,
@@ -124,12 +125,19 @@ a {
 	&-0001 {
 		&::before {
 			background-color: $second-green;
-			
 		}
 		&::after {
-			background-color: $second-pink;
-			
+			background-color: $second-pink;	
 		}
+	}
+	&-0002 {
+		&::before {
+			background-color: $third-purple;
+		}
+		&::after {
+			background-color: $white;	
+		}
+		// #c4b7d2
 	}
 	// end
 	&--vertical {
@@ -242,6 +250,9 @@ a {
 .about-descr {
 	max-width: 500px;
 	font-size: rem(20px);
+	height: 250px;
+	overflow: hidden;
+
 }
 
 .about-model-list {

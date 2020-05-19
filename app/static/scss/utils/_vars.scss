@@ -7,6 +7,7 @@ $main-blue: #e5eaeb;
 $second-green: #e6ffe8;
 $second-pink: #ffe7e7;
 
+$third-purple: #c4b7d2;
 
 $white: #fff;
 $black: #000;
@@ -23,11 +24,16 @@ $main-fz: 16px;
 @function rem($pixels, $context: $main-fz) {
   @return ($pixels/$context) * 1rem;
 }
+
 h1 {
   font-size:  rem(114px);
   line-height: rem(116px);
+ 
 }
-h2 {font-size: rem(96px);}
+h2 {
+  font-size: rem(96px);
+  line-height: rem(96px);
+}
 h3 {font-size: rem(24px);}
 h4 {font-size: rem(20px);}
 h5 {font-size: rem(18px);}
