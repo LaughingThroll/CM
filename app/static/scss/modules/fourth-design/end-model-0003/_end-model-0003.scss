@@ -1,0 +1,24 @@
+.end-model-0003 {
+  position: relative;
+  padding: rem(30px) 0 0;
+  &__headline {
+    &-descr {
+      margin: rem(20px) 0 rem(20px);
+    }
+  }
+  &__contacts {
+    a {
+      color: $fourth-white;
+      margin-top: 10px;
+    }  
+  }
+  .img {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    max-width: 800px;
+    width: 100%;
+    min-height: 550px;
+    background-position: 0 50%;
+  }
+}

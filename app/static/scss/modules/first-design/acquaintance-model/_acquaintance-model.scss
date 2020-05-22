@@ -1,17 +1,17 @@
 .acquaintance-model {
   display: flex;
+  padding: rem(50px) 0;
   &__content {
-    padding: rem(50px) 0;
+    
     flex: 0 1 60%;
   }
   &__images {
-    padding: rem(100px) 0 0;
     flex: 1 1 40%;
     text-align: center;
     position: relative;
     .img {
       position: absolute;
-      bottom: 60px;
+      bottom: 100px;
       left: -150px;
       width: 125%;
       min-height: 430px;
@@ -40,7 +40,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 0px;
     left: -50px;
     height: 1px;
     width: 100%;
@@ -49,5 +49,5 @@
 }
 .acquaintance-model__socials {
   display: inline-block;
-  margin-top: 12%;
+  margin-top: 20%;
 }

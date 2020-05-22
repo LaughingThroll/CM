@@ -123,6 +123,18 @@ a {
 	}
 	// colors on different design
 	&-0001 {
+		.img {
+			position: relative;
+			&::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($white, 0.2);
+      }
+		}
 		&::before {
 			background-color: $second-green;
 		}
@@ -137,7 +149,45 @@ a {
 		&::after {
 			background-color: $white;	
 		}
-		// #c4b7d2
+	}
+	&-0003 {
+		color: $fourth-white;  
+		g {
+			fill: $fourth-white;
+		}
+		.current-model__pagination-dot {
+			color: $fourth-white;
+			&::before,
+			&::after {
+				background-color: $fourth-white;
+			}
+		}
+		.current-model__arrow {
+			color: $fourth-white;
+		}
+		.footer-collection__title {
+			&::before {
+				background-color: $fourth-white;
+			}
+		}
+		&::before {
+			background-color: $fourth-red;
+		}
+		&::after {
+			background-color: $fourth-black;	
+		}
+		.img {
+			position: relative;
+			&::before {
+				content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+				background-color: rgba($black, .5);
+			}
+		}
 	}
 	// end
 	&--vertical {
@@ -232,7 +282,7 @@ a {
       &::before {
         content: "";
         position: absolute;
-        bottom: 3px;
+        bottom: 2px;
         right: 0;
         height: 1px;
         width: 0;
@@ -260,9 +310,6 @@ a {
 		// padding-left: 110px;
 		font-size: rem(16px);
 		position: relative;
-		// transform: rotateY(360deg);
-		// unicode-bidi:bidi-override;
-  	// direction:rtl;
 		span {
 			color: darken($main-grey, 30);
 		}
@@ -273,74 +320,47 @@ a {
 		&:first-child {
 			padding-left: 110px;
 		}
-		&:first-child::before {
+		&::before {
 			content: "";
 			position: absolute;
-			top: 50%;
+			top: 51%;
 			left: 0;
 			height: 1px;
-			width: 100px;
 			background-color: $black;
+		}
+		&:first-child::before {
+			
+			width: 100px;
 		}
 		&:nth-child(2) {
 			padding-left: 95px;
 		}
 		&:nth-child(2)::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			height: 1px;
 			width: 85px;
-			background-color: $black;
 		}
 		&:nth-child(3) {
 			padding-left: 70px;
 		}
 		&:nth-child(3)::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			height: 1px;
 			width: 60px;
-			background-color: $black;
 		}
 		&:nth-child(4) {
 			padding-left: 100px;
 		}
 		&:nth-child(4)::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			height: 1px;
 			width: 90px;
-			background-color: $black;
 		}
 		&:nth-child(5) {
 			padding-left: 130px;
 		}
 		&:nth-child(5)::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			height: 1px;
 			width: 120px;
-			background-color: $black;
 		}
 		&:nth-child(6) {
 			padding-left: 60px;
 		}
 		&:nth-child(6)::before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			height: 1px;
 			width: 50px;
-			background-color: $black;
 		}
 	}
 }
