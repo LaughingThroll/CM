@@ -1,11 +1,12 @@
 .main-collections {
   padding: rem(40px) 0;
   position: relative;
+  overflow: hidden;
   &::before {
     content: "Catalogue";
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0; 
     width: 100%;
     height: 100%;
     font-size: rem(387px);
@@ -18,7 +19,7 @@
   .row:last-child {
     .model-item:nth-child(2) {
       .img {
-        background-position: -120px 0;   
+        background-position: 100% 0;   
       }
     }    
    

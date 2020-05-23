@@ -70,11 +70,6 @@ a {
 .footer {
 	flex: 0 0 auto;
 }
-.container-fluid {
-	max-width: 1800px;
-	padding: 0 15px;
-	margin: 0 auto;
-}
 .container {
 	max-width: 1460px;
 	padding: 0 15px;
@@ -88,7 +83,7 @@ a {
 .coll-number {
 	color: $main-grey;
 	line-height: 30px;
-	font-size: rem(14px);
+	font-size: 14px;
 	display: inline-block;
 	width: 60px;
 }

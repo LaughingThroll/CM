@@ -1,10 +1,10 @@
 .see-link {
-  font-size: rem(24px);
+  font-size: 24px;
   color: $main-grey;
-  transform: translateX(-50%);
   transition: all 3s ease-in;
   position: relative;
   &--close {
+    
     &::before {
       content: '';
       position: absolute;
@@ -17,6 +17,7 @@
     }
   }
   &--open {
+    transform: translateX(-50%);
     &::before {
       content: '';
       position: absolute;

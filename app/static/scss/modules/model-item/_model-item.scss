@@ -1,7 +1,6 @@
 .model-item {
   display: block;
-  max-width: 285px;
-  width: 100%;
+  flex: 0 1 20%;
   padding-left: 45px;
   position: relative;
   &::before {
@@ -11,10 +10,10 @@
     bottom: -12%;
     left: 0;
     color: $main-grey;
-    font-size: rem(22px);
+    font-size: 22px;
   }
   & + .model-item {
-    margin-left: 135px;
+    margin-left: rem(135px);
   }
   
   &__image {
