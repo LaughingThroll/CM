@@ -17,3 +17,11 @@ const wrap = (target, wrapEl = 'div', className = '') => {
 
 }
 export {wrap}  
+
+export function raf(fn) { 
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      fn()
+    })
+  })
+}

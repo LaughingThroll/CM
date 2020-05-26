@@ -1,6 +1,8 @@
 .header {
   padding-top: rem(20px);
   text-align: center;
+  background-color: #fff;
+ 
   &__logo {
     svg {
       display: block;
@@ -9,19 +11,19 @@
   }
   &__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    max-width: 50%;
-    width: 100%;
+    background-color: #fff;
+    z-index: 300;
   }
 }
 
 .header__btn {
   width: 20px;
   height: 20px;
-  position: relative;
+  position: absolute;
+  left: 4%;
   cursor: pointer;
-  z-index: 101;
   &::before, 
   &::after {
     content: '';
@@ -39,8 +41,11 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) rotate(90deg);
+    transition: transform .2s ease-in-out;
   }
   &--active {
-    
+    &::after {
+      transform: translateX(-50%) rotate(0deg);
+    }
   }
 }
