@@ -1,0 +1,12 @@
+ 
+  .portfolio-model {
+    &__title {
+      text-align: center;
+    }
+    &__gallery {
+      .img {
+        margin-bottom: 5px;
+        min-height: 250px;
+      }
+    }
+  }

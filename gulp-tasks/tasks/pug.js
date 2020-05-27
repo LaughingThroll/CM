@@ -21,10 +21,11 @@ module.exports = () => {
       .pipe(G.pug({
         pretty: G.isDevelopment ? true : false 
       }))
-      .pipe(G.gulpRevRewrite({manifest}))
-      .pipe(G.gulp.dest(function (file) {
-        return file.stem !== '_' ? 'dist/' : 'app/'
-      }))
+      // .pipe(G.gulpRevRewrite({manifest}))
+      // .pipe(G.gulp.dest(function (file) {
+      //   return file.stem !== '_' ? 'dist/' : 'app/'
+      // }))
+      .pipe(G.gulp.dest('dist'))
 
       .pipe(G.browserSync.reload({ stream: true }))
   })

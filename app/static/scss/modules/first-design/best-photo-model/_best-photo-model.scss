@@ -8,42 +8,40 @@
       margin-bottom: 10px;
     }
     &-descr {
-      height: 150px;
+      height: 50px;
+      font-size: 16px;
     }
   }
+  // Maybe need rebuild
   &__gallery {
     position: relative;
-    .img:first-child {
+    .img {
       position: absolute;
-      right: 0;
-      top: -160px; 
       width: 100%;
-      max-width: 300px;
-      min-height: 400px;
-    }
-    .img:nth-child(2) {
-      position: absolute;
-      right: 20%;
-      top: -120px; 
-      width: 100%;
-      max-width: 300px;
-      min-height: 450px;
-    }
-    .img:nth-child(3) {
-      position: absolute;
-      left: 24%;
-      top: 0; 
-      width: 100%;
-      max-width: 500px;
-      min-height: 300px;
-    }
-    .img:nth-child(4) {
-      position: absolute;
-      left: 0;
-      top: 10px; 
-      width: 100%;
-      max-width: 400px;
-      min-height: 350px;
+      &:first-child {
+        right: 0;
+        top: -50px;
+        max-width: 300px;
+        min-height: 400px;
+      }
+      &:nth-child(2) {
+        right: 250px;
+        top: -20px;
+        max-width: 300px;
+        min-height: 450px;
+      }
+      &:nth-child(3) {
+        top: 50px;
+        right: 500px;
+        max-width: 500px;
+        min-height: 300px;
+      }
+      &:nth-child(4) {
+        left: 0;
+        top: 0;
+        max-width: 400px;
+        min-height: 400px;
+      }
     }
   }
 }

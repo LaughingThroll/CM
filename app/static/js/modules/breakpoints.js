@@ -1,13 +1,23 @@
 import { show } from './animate'
 import { wrap } from '../utils/utils'
-
+// index
 const modelList = Array.from(document.querySelectorAll('.model-list'))
 const headerContainerLive = document.getElementsByClassName('header')[0].children[0].children
 const headerContainer = document.getElementsByClassName('header')[0].children[0]
 const homePage = document.querySelector('#home')
 const mainCollections = document.querySelector('.main-collections')
 
-// LessWidth
+// first-design
+const endModelContacts = document.querySelector('.end-model__contacts')
+const endModelImage = document.querySelector('.end-model__image')
+
+
+// LessWidth 
+export function mediaWidthLess1120() {
+  if (window.innerWidth <= 1120) {
+    endModelContacts.insertAdjacentElement('beforeend', endModelImage)
+  }
+}
 export function mediaWidthLess815() {
   const headerInner = document.getElementsByClassName('header__inner')[0]
 
@@ -18,11 +28,12 @@ export function mediaWidthLess815() {
       <div class="header__btn">
       </div>
       `)
-      
-    mainCollections.insertAdjacentHTML('afterbegin', `<div class="coll-list"></div>` )  
+
+    mainCollections.insertAdjacentHTML('afterbegin', `<div class="coll-list"></div>`)
 
     const collList = document.getElementsByClassName('coll-list')[0]
     modelList.forEach(el => {
+      
       collList.insertAdjacentElement('afterbegin', el)
     })
     // animation collList
@@ -35,7 +46,7 @@ export function mediaWidthLess815() {
       if (collList.classList.contains('coll-list--active')) {
 
         modelList.forEach(el => show(el, 'translate'))
-       
+
         homePage.style.overflow = 'hidden'
 
       } else {
@@ -45,6 +56,12 @@ export function mediaWidthLess815() {
   }
 }
 // MoreWidth
+export function mediaWidthMore1120() {
+  if (window.innerWidth > 1120) {
+    endModelContacts.insertAdjacentElement('beforebegin', endModelImage)
+  }
+}
+
 export function mediaWidthMore815() {
   const collList = document.getElementsByClassName('coll-list')[0]
   const mainCollectionInner = document.getElementsByClassName('main-collections__inner')
@@ -52,16 +69,17 @@ export function mediaWidthMore815() {
 
   if (window.innerWidth > 815 && collList !== undefined) {
 
-    Array.from(collList.children).forEach((el, i) => {
-      mainCollectionInner[0].children[i].insertAdjacentElement('beforeend', el)
+    Array.from(collList.children).reverse().forEach((el, i) => {
+      mainCollectionInner[0].children[i].insertAdjacentElement(i === 0 ? 'beforeend' : 'afterbegin', el)
     })
 
     headerContainer.insertAdjacentElement('beforeend', logo)
     collList.remove()
     document.getElementsByClassName('header__inner')[0].remove()
-    
-
   }
-
 }
+
+
+
+
 

@@ -1,0 +1,10 @@
+.best-photo-model__gallery {
+  .img {
+    &:nth-child(3) {
+      max-width: 350px;
+    }
+    &:nth-child(4) {
+      max-width: 300px;
+    }
+  }
+}

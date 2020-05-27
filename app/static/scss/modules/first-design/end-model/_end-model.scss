@@ -2,7 +2,11 @@
   padding: rem(50px) 0 0;
   &__headline {
     margin-bottom: 10px;
+    &-title {
+      margin-bottom: rem(10px);
+    }
     &-descr {
+      font-size: 16px;
       max-width: 400px;
       height: 90px;
       overflow: hidden;
@@ -14,20 +18,18 @@
     justify-content: space-between;
   }
   &__item {
-    flex: 1 1 33.3333%;
-    & + .end-model__item {
-      margin-left: 50px;
+    flex: 0 1 calc(40% - 20px);
+    &-image {
+      min-height: 300px;
     }
   }
 
-  .img {
+  &__image {
     flex: 0 1 20%;
     min-height: 450px;
   }
-
   &__socials {
-    margin: 0 0 6% 5%;
-    align-self: flex-end;
+    margin: rem(30px) 0 0;
   }
   &__contacts {
     &-title {

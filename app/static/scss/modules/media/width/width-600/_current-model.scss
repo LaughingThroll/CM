@@ -1,0 +1,22 @@
+.current-model {
+  &__pagination {
+    &-dot {
+      &.current-model__pagination-dot--active {
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
+      &:first-child.current-model__pagination-dot--active {
+        margin-bottom: 40px;
+      }
+      &:last-child.current-model__pagination-dot--active {
+        margin-top: 60px;
+      }
+      &--active {
+        &::before,
+        &::after {
+          height: 60px;
+        }
+      }
+    }
+  }
+}

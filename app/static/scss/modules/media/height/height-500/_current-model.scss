@@ -1,0 +1,32 @@
+.current-model {
+  &__pagination {
+    &-dot {
+      & + .current-model__pagination-dot {
+        margin-top: 0px;
+      }
+      &.current-model__pagination-dot--active {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      &:first-child.current-model__pagination-dot--active {
+        margin-bottom: 30px;
+      }
+      &:last-child.current-model__pagination-dot--active {
+        margin-top: 30px;
+      }
+      &--active {
+        font-size: 30px;
+        &::before,
+        &::after {
+          height: 40px;
+        }
+        &::before {
+          bottom: 45px;
+        }
+        &::after {
+          top: 45px;
+        }
+      }
+    }
+  }
+}

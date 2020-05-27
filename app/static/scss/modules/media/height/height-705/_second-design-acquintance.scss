@@ -1,0 +1,20 @@
+.acquaintance-model-0001 {
+  .img {
+    &:first-child {
+      min-height: 450px;
+    }
+    &:last-child {
+      min-height: 390px;
+    }
+  }
+  &__about {
+    padding: 0;
+    &-list {
+      margin-top: 150px;
+    }
+    &-descr {
+      margin: 0 40px 0 0;
+    }
+  }
+
+}

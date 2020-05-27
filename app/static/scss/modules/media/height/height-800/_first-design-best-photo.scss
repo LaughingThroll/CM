@@ -1,0 +1,16 @@
+.best-photo-model__gallery {
+  .img {
+    &:first-child {
+      min-height: 350px;
+    }
+    &:nth-child(2) {
+      min-height: 380px;
+    }
+    &:nth-child(3) {
+      top: 30px;
+    }
+    &:nth-child(4) {
+      top: 0;
+    }
+  }
+}

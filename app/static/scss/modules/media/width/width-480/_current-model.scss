@@ -1,0 +1,17 @@
+.current-model__inner {
+  padding-right: 50px;
+}
+.current-model__pagination-dot--active {
+  font-size: 36px;
+}
+.current-model__arrow {
+  &::before {
+    width: 32px;
+  }
+}
+.current-model__arrow-prev {
+  padding-left: 40px;
+}
+.current-model__arrow-next {
+  padding-right: 40px;
+}

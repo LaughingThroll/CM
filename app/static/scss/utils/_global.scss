@@ -79,6 +79,7 @@ a {
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
+	width: 100%;
 }
 .coll-number {
 	color: $main-grey;
@@ -86,15 +87,6 @@ a {
 	font-size: 14px;
 	display: inline-block;
 	width: 60px;
-}
-.row {
-	display: flex;
-	&:first-child {
-		margin-bottom: rem(40px);
-	}
-	&:last-child {
-		align-items: flex-end;
-	}
 }
 
 //  попробовать это генерировать через JS сложность в том чтобы добраться до псевдоелементов getComputedStyle и нужно ли это генерировать с JS ??
@@ -253,7 +245,7 @@ a {
 	
 }
 .phone {
-	font-size: rem(20px);
+	font-size: 20px;
   color: $main-color;
 }
 
@@ -272,7 +264,7 @@ a {
     a {
       color: $main-color;
       padding: 3px;
-      font-size: (18px);
+      font-size: 18px;
       position: relative;
       &::before {
         content: "";
@@ -294,7 +286,7 @@ a {
 
 .about-descr {
 	max-width: 500px;
-	font-size: rem(20px);
+	font-size: 20px;
 	height: 250px;
 	overflow: hidden;
 
@@ -303,7 +295,7 @@ a {
 .about-model-list {
 	li {
 		// padding-left: 110px;
-		font-size: rem(16px);
+		font-size: 16px;
 		position: relative;
 		span {
 			color: darken($main-grey, 30);

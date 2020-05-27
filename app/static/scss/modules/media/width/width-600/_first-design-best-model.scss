@@ -1,0 +1,11 @@
+.best-photo-model__gallery {
+  .img {
+    flex: 0 1 100%;
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      min-height: 300px;
+    }
+  }
+}

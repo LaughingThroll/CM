@@ -49,10 +49,10 @@ module.exports = () => {
   G.gulp.task('webpackJs', function () {
     return G.gulp.src('app/staic/js/*.js')
       .pipe(G.webpack(webConfig))
-      .pipe(G.gulpRev())
+      // .pipe(G.gulpRev())
       .pipe(G.gulp.dest('dist/js'))
-      .pipe(G.gulpRev.manifest())
-      .pipe(G.gulp.dest('app/static/manifests'))
+      // .pipe(G.gulpRev.manifest())
+      // .pipe(G.gulp.dest('app/static/manifests'))
       .pipe(G.browserSync.reload({ stream: true }))
   })
 }

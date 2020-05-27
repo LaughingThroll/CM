@@ -1,0 +1,16 @@
+.model-item {
+  & + .model-item {
+    margin-left: rem(65px);
+  }
+  &__image {
+    min-height: 220px;
+  }
+}
+.model-list--right {
+  order: 1;
+  margin-left: rem(175px);
+  margin-right: 0;
+}
+.row {
+  justify-content: center;
+}

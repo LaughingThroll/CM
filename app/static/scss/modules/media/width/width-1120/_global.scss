@@ -1,0 +1,19 @@
+html {
+  font-size: $main-fz * 0.5;
+}
+h2 {
+  font-size: 60px;
+  line-height: 60px;
+}
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+}
+.footer-collection__title {
+  font-size: 36px;
+  line-height: 36px;
+  padding-right: 60px;
+  &::before {
+    width: 60px;
+  }
+}

@@ -4,9 +4,17 @@ include ./../../../mixins/_about-model-list__item.pug
   .acquaintance-model__content
     .acquaintance-model__headline
       h1.acquaintance-model__headline-title Анна Филина
-      a.phone(href="tel:+380631481775") +380631481775 
-    .acquaintance-model__about
-      ul.about-model-list
+      a.phone(href="tel:+380631481775") +380631481775
+    ul.acquaintance-model__socials.model-socials
+     li 
+       a(href="#") Facebook
+     li 
+       a(href="#") Facebook
+     li 
+       a(href="#") Facebook   
+  .acquaintance-model__about
+    .acquaintance-model__about-inner
+      ul.about-model-list 
         +about-model-list__item('Дата рождения: ', '13 июля 1996 г.')
         +about-model-list__item('Обхват груди: ', '85 см')
         +about-model-list__item('Обхват талии: ', '60 см')
@@ -14,12 +22,4 @@ include ./../../../mixins/_about-model-list__item.pug
         +about-model-list__item('Рост: ', '170 см')
         +about-model-list__item('Вес: ', '49 кг')
       p.acquaintance-model__about-descr.about-descr Привет меня зовут Анна)Давай знакомиться)) Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam ad culpa nostrum pariatur ea, voluptate distinctio temporibus ab accusamus ipsum repudiandae numquam vel expedita consequatur iure, voluptas ullam atque sunt aperiam odit quos corporis rem. Soluta obcaecati ex odio, ab fuga necessitatibus quo cupiditate! Similique corrupti sit architecto sed.         
-  .acquaintance-model__images
-    ul.acquaintance-model__socials.model-socials
-      li 
-        a(href="#") Facebook
-      li 
-        a(href="#") Facebook
-      li 
-        a(href="#") Facebook
-    .img(style="background-image: url(images/content/анна_филина/__3.jpg);  background-image: image-set(url(images/content/анна_филина/__3x1.jpg) 1x, url(images/content/анна_филина/__3x2.jpg) 2x, url(images/content/анна_филина/__3x3.jpg) 3x);") 
+    .img.acquaintance-model__images(style="background-image: url(images/content/анна_филина/__3.jpg);  background-image: image-set(url(images/content/анна_филина/__3x1.jpg) 1x, url(images/content/анна_филина/__3x2.jpg) 2x, url(images/content/анна_филина/__3x3.jpg) 3x);") 

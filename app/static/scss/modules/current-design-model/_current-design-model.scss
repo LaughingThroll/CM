@@ -10,7 +10,7 @@
   &__arrow {
     position: absolute;
     top: -45px;
-    font-size: rem(24px);
+    font-size: 24px;
     color: $main-grey;
     z-index: 10;
     text-transform: lowercase;
@@ -51,6 +51,7 @@
       cursor: pointer;
       outline: none;
       position: realtive;
+      font-size: 16px;
       padding: 10px 0;
       transition: font-size 0.3s ease-in;
       &::before,
@@ -86,13 +87,13 @@
       }
       &--active {
         position: relative;
-        font-size: rem(48px);
+        font-size: 48px;
         &::before,
         &::after {
           content: "";
           position: absolute;
           left: 50%;
-          height: rem(100px);
+          height: 100px;
 
           width: 1px;
           background-color: $black;

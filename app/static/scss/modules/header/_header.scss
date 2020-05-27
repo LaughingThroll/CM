@@ -1,8 +1,6 @@
 .header {
   padding-top: rem(20px);
   text-align: center;
-  background-color: #fff;
- 
   &__logo {
     svg {
       display: block;
@@ -13,8 +11,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    z-index: 300;
   }
 }
 

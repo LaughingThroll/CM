@@ -1,41 +1,37 @@
 .acquaintance-model {
-  display: flex;
   padding: rem(50px) 0;
   &__content {
-    
-    flex: 0 1 60%;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__headline {
+    position: relative;
+    .phone {
+      position: absolute;
+      bottom: 0;
+      right: 20px;
+    }
+  }
+  &__socials {
+    margin-left: rem(150px);
+  }
+  &__about {
+    display: flex;
+    margin-top: 10px;
+    &-inner {
+      flex: 0 1 50%;
+      margin-top: rem(70px);
+    }
   }
   &__images {
-    flex: 1 1 40%;
-    text-align: center;
-    position: relative;
-    .img {
-      position: absolute;
-      bottom: 100px;
-      left: -150px;
-      width: 125%;
-      min-height: 430px;
-    }
-
+    flex:  0 1 50%;
+    min-height: 430px;
+    height: 100%;
   }
 }
-.acquaintance-model__headline {
-  position: relative;
-  display: inline-block;
-  .phone {
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-  }
-}
-
-.acquaintance-model__about {
-  margin-top: rem(115px);
-}  
 .acquaintance-model__about-descr {
-  
   padding-top: rem(10px);
-  margin: rem(50px) 170px 0 auto;
+  margin: rem(50px) rem(60px) 0 auto;
   position: relative;
   &::before {
     content: "";
@@ -47,7 +43,4 @@
     background-color: $main-color;
   }
 }
-.acquaintance-model__socials {
-  display: inline-block;
-  margin-top: 20%;
-}
+
