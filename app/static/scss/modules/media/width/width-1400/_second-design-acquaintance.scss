@@ -1,14 +1,13 @@
 .acquaintance-model-0001 {
   &__top {
     &-image {
-      min-height: 410px;
+      flex: 0 1 calc(40% - 20px)
     }
   }
   &__about {
     &-image {
-      min-height: 390px;
-      margin: -210px 100px 0 0;
+      flex: 0 1 calc(30% - 20px);
+      margin-right: 110px;
     }
   }
-
 }

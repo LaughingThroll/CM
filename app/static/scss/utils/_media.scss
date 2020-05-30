@@ -1,6 +1,9 @@
 // ON IMPORT LINK PLEASE PRESS CTRL + CLICK
 //  ============================== HEIGHT ================================================================
 
+@media (max-height: 900px) {
+  @import '../modules/media/height/height-900/second-design-best-photo';
+}
 @media (max-height: 800px) {
   @import "../modules/media/height/height-800/global";
 
@@ -12,7 +15,11 @@
   @import "../modules/media/height/height-800/first-design-end-model";
 
   @import "../modules/media/height/height-800/second-design-acquaintance";
+  @import '../modules/media/height/height-800/second-design-best-photo';
+  @import '../modules/media/height/height-800/second-design-portfolio';
+  @import '../modules/media/height/height-800/second-design-end-model';
 }
+
 @media (max-height: 730px) {
   @import "../modules/media/height/height-730/global";
 
@@ -26,12 +33,18 @@
   @import "../modules/media/height/height-705/first-design-end-model";
 
   @import "../modules/media/height/height-705/second-design-acquintance";
+  @import '../modules/media/height/height-705/second-design-best-photo';
+  @import '../modules/media/height/height-705/second-design-portfolio';
+  @import '../modules/media/height/height-705/second-design-end-model';
+  
 }
+
 @media (max-height: 685px) {
   @import "../modules/media/height/height-685/index";
 
   @import "../modules/media/height/height-685/first-design-acquaintance";
 }
+
 @media (max-height: 600px) {
   @import "../modules/media/height/height-600/index";
 
@@ -45,12 +58,24 @@
 }
 
 //========================================= WIDTH ================================================================
+@media (max-width: 1400px) {
+  @import "../modules/media/width/width-1400/second-design-acquaintance";
+}
+
 @media (max-width: 1300px) {
   @import "../modules/media/width/width-1300/global";
 
   @import "../modules/media/width/width-1300/first-design-acquaintance";
   @import "../modules/media/width/width-1300/first-design-best-photo";
+
+  @import "../modules/media/width/width-1300/second-design-acquaintance";
 }
+
+@media (max-width: 1230px) {
+  @import "../modules/media/width/width-1230/second-design-acquaintance";
+  @import '../modules/media/width/width-1230/second-design-best-photo';
+}
+
 @media (max-width: 1120px) {
   @import "../modules/media/width/width-1120/global";
 
@@ -59,6 +84,10 @@
   @import "../modules/media/width/width-1120/first-design-acquaintance";
   @import "../modules/media/width/width-1120/first-design-best-photo";
   @import "../modules/media/width/width-1120/first-design-end-model";
+
+  @import '../modules/media/width/width-1120/second-design-best-photo';
+  @import '../modules/media/width/width-1120/second-design-end-model';
+
 }
 
 @media (max-width: 815px) {
@@ -72,6 +101,12 @@
   @import "../modules/media/width/width-815/first-design-best-photo";
   @import "../modules/media/width/width-815/first-design-portfolio";
   @import "../modules/media/width/width-815/first-design-end-model";
+
+  @import "../modules/media/width/width-815/second-design-acquintance";
+  // Maybe Errorr
+  @import '../modules/media/width/width-815/second-design-best-photo';
+  // End
+  @import '../modules/media/width/width-815/second-design-portfolio';
 }
 
 @media (max-width: 600px) {
@@ -83,7 +118,11 @@
 
   @import "../modules/media/width/width-600/first-design-best-model";
   @import "../modules/media/width/width-600/first-design-portfolio";
+  
+  @import '../modules/media/width/width-600/second-design-end-model';
+
 }
+
 @media (max-width: 480px) {
   @import "../modules/media/width/width-480/global";
 
@@ -94,6 +133,12 @@
   @import "../modules/media/width/width-480/first-design-acquaintance";
   @import "../modules/media/width/width-480/first-design-portfolio";
   @import "../modules/media/width/width-480/first-design-end-model";
+
+  @import "../modules/media/width/width-480/second-design-acquaintance";
+  @import '../modules/media/width/width-480/second-design-best-photo';
+  @import '../modules/media/width/width-480/second-design-portfolio';
+  @import '../modules/media/width/width-480/second-design-end-model';
+  
 }
 
 // DANGER NOT TOUCH
@@ -104,7 +149,51 @@
   }
   // end Index.html
 }
+
 // ================================== MIX ===================
+@media (max-height: 800px) and (max-width: 1230px) {
+  // start second-design-acquaintance
+  .acquaintance-model-0001 {
+    &__top {
+      &-image {
+        top: 15px;
+        left: 0;
+        margin-right: 25px;
+        min-height: 250px;
+      }
+    }
+  }
+  // end second-design-acquaintance
+}
+@media (max-height: 800px) and (max-width: 1120px) {
+  // start second-design-best-photo
+
+  .best-photo-model-overflow {
+    overflow: auto;
+  }
+  // end second-design-best-photo
+
+  // start second-design-end-model
+  .end-model-0001 {
+    &__headline {
+      &-title {
+        margin-bottom: rem(5px);
+      }
+      &-inner {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // end second-design-end-model
+}
+@media (max-height: 800px) and (max-width: 815px) {
+  // start second-design-acquaintance
+  .acquaintance-model-0001__about-descr {
+    margin-top: 10px;
+  }
+  // end second-design-acquaintance
+}
+
 @media (max-height: 800px) and (max-width: 1120px) {
   // start first-design end-model
   .end-model__item {
@@ -115,11 +204,32 @@
   }
   // end first-design end-model
 }
-
-@media (max-height: 700px) and (max-width: 1120px) {
+@media (max-height: 705px) and (max-width: 1230px) {
+  // start second-design-acquaintance
+  .acquaintance-model-0001__about {
+    padding: 40px 0 0;
+  }
+  // end second-design-acquaintance
+}
+@media (max-height: 705px) and (max-width: 1120px) {
   // start first-design end-model
   .end-model__image {
     display: none;
   }
   // end first-design end-model
+}
+
+@media (max-height: 705px) and (max-width: 600px) {
+  // start second-design-end-model
+  .end-model-0001 {
+    &__headline {
+      &-title {
+        margin-bottom: rem(10px);
+      }
+      &-inner {
+        margin-bottom: rem(20px);
+      }
+    }
+  }
+  // end second-design-end-model
 }

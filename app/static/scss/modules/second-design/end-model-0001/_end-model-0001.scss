@@ -5,48 +5,52 @@
     &-inner {
       display: flex;
       justify-content: space-between;
+      margin-bottom: rem(10px);
+      & > * {
+        flex: 0 1 calc(50% - 20px);
+      } 
     }
+   
     &-title {
-      margin-right: 50px;
+      margin: 0 rem(50px) rem(10px) 0;
     }
+    
     &-descr {
+      font-size: 16px;
       text-align: left;
-      max-width: 500px;   
-      margin-left: 50px;
+      margin-left: rem(50px);
+      height: 160px;
+      overflow: hidden;
+      
     }
     .img {
-      margin: 40px 80px 0 0;
-      max-width: 700px;
-      width: 100%;
       min-height: 400px;
     }
-    .end-model-0001__socials {
-      margin-top: 30px;
+    
+  }
+  &__socials {
+    margin-top: rem(30px);
+    text-align: left;
+  }
+  &__box {
+    display: flex;
+    &-image {
+      margin: -150px 0 0;
+      flex: 0 1 45%;
+      min-height: 340px;
     }
   }
-  &-img {
-    bottom: 150px;
-    left: 0;
-    max-width: 650px;
-    width: 100%;
-    min-height: 340px;
-  }
 }
-.end-model-0001__socials {
-  text-align: left;
-}
-.end-model-0001__contacts { 
-  margin-top: 10px;
-  max-width: 500px;
-  margin-left: auto;
-  text-align: left; 
+
+.end-model-0001__contacts {
+  flex: 0 1 calc(55% - 10px);
+  margin: rem(10px) 0 0 auto;
   &-title {
     margin-bottom: 5px;
-  } 
+  }
   &-list {
     li {
       margin-bottom: 5px;
     }
-    
   }
 }

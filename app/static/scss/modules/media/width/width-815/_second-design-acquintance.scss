@@ -1,0 +1,38 @@
+.acquaintance-model-0001 {
+  &__top {
+    flex-direction: column;
+    margin-bottom: 10px;
+    &-image {
+      position: static;
+      top: 0;
+      left: 0;
+      order: 1;
+
+    }
+  }
+  &__headline {
+    text-align: left;
+    margin-bottom: 20px;
+    &-title {
+      span {
+        margin-right: 0;
+      }
+    }
+    .phone {
+      bottom: -10px;
+      left: 0;
+    }
+  }
+  &__about {
+    flex-direction: column;
+    padding: 10px 0 0;
+    &-list {
+      order: 1;
+      margin: 0 0 0;
+    }
+    &-descr {
+      margin-bottom: 15px;
+      flex: 1 1 auto;
+    }
+  }
+}

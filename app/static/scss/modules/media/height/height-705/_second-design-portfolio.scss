@@ -1,0 +1,12 @@
+.portfolio-model-0001 {
+  &__title {
+    font-size: 60px;
+    line-height: 62px;
+  }
+  &__gallery {
+    margin-top: rem(10px);
+    .img {
+      min-height: 190px;
+    }
+  }
+}

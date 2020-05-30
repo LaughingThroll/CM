@@ -2,30 +2,22 @@
   display: flex;
   flex-direction: column;
   &__top {
-    position: relative;
-    .img {
-      position: absolute;
-      &:first-child {
-      
-        top: -35%;
-        left: 7%;
-        max-width: 300px;
-        min-height: 500px;
-      }
-      &:last-child {
-        top: 100px;
-        left: 28%;
-        max-width: 400px;
-        min-height: 500px;
-      }
+    display: flex;
+   
+    &-image {
+      margin: -100px 0 0 100px;
+      min-height: 500px;
+      flex: 0 1 calc(35% - 20px)
     }
   }
   &__headline {
     position: relative;
     text-align: right;
+    height: 100%;
+    margin-left: rem(10px);
     &-title {
       span {
-        margin-right: 280px;
+        margin-right: rem(200px);
       }
     }
     .phone {
@@ -35,14 +27,20 @@
     }
   }
   &__about {
-    padding: rem(50px) 0 0;
     display: flex;
     justify-content: space-between;
     &-list {
-      margin-top: auto;
+      flex: 0 1 calc(35% - 20px);
+      margin-top: rem(30px);
+    }
+    &-image {
+      flex: 0 1 calc(35% - 20px);
+      min-height: 500px;
+      margin: -300px 100px 0 0;
+      height: 100%;
     }
     &-descr {
-      margin: 50px 40px 0 0;
+      flex: 1 1 auto;
     }
   }
 }

@@ -1,7 +1,7 @@
 module.exports = () => {
   // Incremental approach 
   G.gulp.task('pug', function () {
-    const manifest = G.gulp.src('app/static/manifests/rev-manifest.json')
+    
     return G.gulp.src('app/pug/**/*.pug')
 
       // files which changed 
@@ -21,10 +21,7 @@ module.exports = () => {
       .pipe(G.pug({
         pretty: G.isDevelopment ? true : false 
       }))
-      // .pipe(G.gulpRevRewrite({manifest}))
-      // .pipe(G.gulp.dest(function (file) {
-      //   return file.stem !== '_' ? 'dist/' : 'app/'
-      // }))
+     
       .pipe(G.gulp.dest('dist'))
 
       .pipe(G.browserSync.reload({ stream: true }))
