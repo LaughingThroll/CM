@@ -1,0 +1,10 @@
+.best-photo-model-0002 {
+  grid-template-rows: 80px 40px repeat(2, 1fr) 50px;
+  &__headline-title {
+    font-size: 70px;
+    line-height: 72px;
+  }
+  .img {
+    min-height: 200px;
+  }
+}

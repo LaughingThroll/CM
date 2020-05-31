@@ -1,11 +1,13 @@
 .end-model-0002 {
   display: flex;
-  .img {
+  & > * {
     flex: 0 1 50%;
+  }
+  .img {
     min-height: 700px;
+    height: 100%;
   }
   &__inner {
-    flex: 0 1 50%;
     margin-left: rem(30px);
   }
   &__headline {
@@ -14,7 +16,7 @@
       margin-bottom: rem(20px);
     }
     &-descr {
-      font-size: rem(20px);
+      font-size: 20px;
       height: 200px;
       overflow: hidden;
       

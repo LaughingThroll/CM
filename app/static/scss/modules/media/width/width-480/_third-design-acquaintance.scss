@@ -1,0 +1,15 @@
+.acquaintance-model-0002 {
+  .img {
+    margin-bottom: 10px;
+  }
+  &__headline-title {
+    font-size: 36px !important;
+    line-height: 38px !important;
+  }
+  &__about-descr {
+    margin-bottom: 30px;
+    &::before {
+      bottom: 38%;
+    }
+  }
+}

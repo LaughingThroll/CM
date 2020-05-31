@@ -1,9 +1,9 @@
 .portfolio-model-0002 {
-  &__gallery {
-    .img {
-      min-height: 300px;
-      flex: 0 1 25%;
-
-    }
+  &__title {
+    margin-bottom: rem(10px);
+  }
+  .img {
+    min-height: 300px;
+    flex: 0 1 25%;
   }
 }

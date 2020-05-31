@@ -1880,6 +1880,10 @@ a
 .acquaintance-model-0002__about
 {
     position: relative;
+
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 60%;
+        flex: 0 1 60%;
 }
 
 .acquaintance-model-0002__about-descr
@@ -1903,9 +1907,12 @@ a
 
 .acquaintance-model-0002 .img
 {
-    width: 100%;
-    max-width: 550px;
+    height: 100%;
     min-height: 700px;
+
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 calc(40% - 10px);
+        flex: 1 1 calc(40% - 10px);
 }
 
 .best-photo-model-0002
@@ -1913,21 +1920,28 @@ a
     display: grid;
 
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 100px 60px repeat(2, 1fr);
+    grid-template-rows: 100px 60px repeat(2, 1fr) 100px;
 }
 
-.best-photo-model-0002 .best-photo-model__headline-title
+.best-photo-model-0002__headline-title
 {
     overflow: hidden;
 
     grid-column: span 10;
 }
 
-.best-photo-model-0002 .best-photo-model__headline-descr
+.best-photo-model-0002__headline-descr
 {
+    font-size: 16px;
+
     overflow: hidden;
 
     grid-column: span 5;
+}
+
+.best-photo-model-0002 .img
+{
+    min-height: 270px;
 }
 
 .best-photo-model-0002 .img:nth-child(3)
@@ -1958,18 +1972,23 @@ a
 .best-photo-model-0002 .img:nth-child(7)
 {
     background-position: 0 25%;
-    background-size: 100%;
 
     grid-column: span 4;
 }
 
-.best-photo-model-0002 .img
+.best-photo-model-0002 .img:nth-child(5),
+.best-photo-model-0002 .img:nth-child(6),
+.best-photo-model-0002 .img:nth-child(7)
 {
-    width: 100%;
-    min-height: 270px;
+    grid-row: span 4;
 }
 
-.portfolio-model-0002__gallery .img
+.portfolio-model-0002__title
+{
+    margin-bottom: .625rem;
+}
+
+.portfolio-model-0002 .img
 {
     min-height: 300px;
 
@@ -1985,22 +2004,22 @@ a
     display: flex;
 }
 
-.end-model-0002 .img
+.end-model-0002 > *
 {
-    min-height: 700px;
-
     -webkit-box-flex: 0;
     -ms-flex: 0 1 50%;
         flex: 0 1 50%;
 }
 
+.end-model-0002 .img
+{
+    height: 100%;
+    min-height: 700px;
+}
+
 .end-model-0002__inner
 {
     margin-left: 1.875rem;
-
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 50%;
-        flex: 0 1 50%;
 }
 
 .end-model-0002__headline
@@ -2015,7 +2034,7 @@ a
 
 .end-model-0002__headline-descr
 {
-    font-size: 1.25rem;
+    font-size: 20px;
 
     overflow: hidden;
 
@@ -2262,6 +2281,10 @@ a
     {
         grid-template-rows: 1fr 50px repeat(5, 1fr);
     }
+    .best-photo-model-0002
+    {
+        grid-template-rows: 100px 60px repeat(2, 1fr);
+    }
 }
 
 @media (max-height: 800px)
@@ -2343,6 +2366,64 @@ a
 
         background-position: 0 13%;
     }
+    .acquaintance-model-0002 .img
+    {
+        min-height: 550px;
+    }
+    .acquaintance-model-0002__headline-title
+    {
+        font-size: 5.625rem;
+        line-height: 5.625rem;
+    }
+    .acquaintance-model-0002__about-descr
+    {
+        margin-bottom: 1.25rem;
+    }
+    .acquaintance-model-0002__about-descr::before
+    {
+        display: none;
+    }
+    .best-photo-model-0002
+    {
+        grid-template-rows: 80px 40px repeat(2, 1fr) 50px;
+    }
+    .best-photo-model-0002__headline-title
+    {
+        font-size: 70px;
+        line-height: 72px;
+    }
+    .best-photo-model-0002 .img
+    {
+        min-height: 200px;
+    }
+    .portfolio-model-0002__gallery .img
+    {
+        min-height: 240px;
+    }
+    .end-model-0002 .img
+    {
+        min-height: 550px;
+    }
+    .end-model-0002__headline
+    {
+        margin-bottom: .625rem;
+    }
+    .end-model-0002__headline-title
+    {
+        margin-bottom: .625rem;
+    }
+    .end-model-0002__socials
+    {
+        margin-bottom: 1.25rem;
+    }
+    .end-model-0002__contacts-title
+    {
+        margin-bottom: .3125rem;
+    }
+    .end-model-0002__contacts-list li + li
+    {
+        margin-top: .3125rem;
+    }
 }
 
 @media (max-height: 730px)
@@ -2375,6 +2456,10 @@ a
 
 @media (max-height: 705px)
 {
+    .overflow-auto
+    {
+        overflow: auto;
+    }
     .acquaintance-model__about-inner
     {
         margin-top: 1.875rem;
@@ -2451,10 +2536,6 @@ a
         min-height: 390px;
         margin: -210px 100px 0 0;
     }
-    .best-photo-overflow
-    {
-        overflow: auto;
-    }
     .portfolio-model-0001__title
     {
         font-size: 60px;
@@ -2491,6 +2572,19 @@ a
     .end-model-0001__socials
     {
         margin-top: .625rem;
+    }
+    .best-photo-model-0002 .img
+    {
+        min-height: 300px;
+    }
+    .portfolio-model-0002__title
+    {
+        font-size: 60px;
+        line-height: 62px;
+    }
+    .portfolio-model-0002 .img
+    {
+        min-height: 210px;
     }
 }
 
@@ -2857,6 +2951,19 @@ a
     {
         margin-bottom: 7.5rem;
     }
+    .acquaintance-model-0002__headline-title
+    {
+        font-size: 70px;
+        line-height: 74px;
+    }
+    .acquaintance-model-0002__about-descr::before
+    {
+        bottom: 40%;
+    }
+    .best-photo-model-0002
+    {
+        grid-template-rows: 70px 40px repeat(2, 1fr) 100px;
+    }
 }
 
 @media (max-width: 815px)
@@ -3181,6 +3288,74 @@ a
         -ms-flex: 0 1 calc(50% - 1.5px);
             flex: 0 1 calc(50% - 1.5px);
     }
+    .acquaintance-model-0002
+    {
+            flex-direction: column-reverse;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+    }
+    .acquaintance-model-0002__about-descr::before
+    {
+        bottom: 32%;
+        left: 0;
+    }
+    .acquaintance-model-0002 .img
+    {
+        min-height: 300px;
+        margin-bottom: 3.125rem;
+    }
+    .best-photo-model-0002__headline-descr
+    {
+        grid-column: span 10;
+    }
+    .best-photo-model-0002 .img
+    {
+        min-height: 300px;
+    }
+    .best-photo-model-0002 .img:nth-child(3),
+    .best-photo-model-0002 .img:nth-child(4),
+    .best-photo-model-0002 .img:nth-child(5),
+    .best-photo-model-0002 .img:nth-child(6),
+    .best-photo-model-0002 .img:nth-child(7)
+    {
+        grid-column: span 5;
+        grid-row: span 2;
+    }
+    .best-photo-model-0002 .img:nth-child(3)
+    {
+        grid-row-start: 7;
+        grid-row-end: 8;
+        grid-column: span 10;
+    }
+    .portfolio-model-0002__gallery .img
+    {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    }
+    .end-model-0002
+    {
+            flex-direction: column;
+
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    }
+    .end-model-0002 .img
+    {
+        min-height: 500px;
+        margin-bottom: .625rem;
+    }
+}
+
+@media (max-width: 650px)
+{
+    .best-photo-model-0002
+    {
+        grid-template-rows: 100px 40px repeat(2, 1fr) 100px;
+    }
 }
 
 @media (max-width: 600px)
@@ -3337,6 +3512,34 @@ a
     .end-model-0001 .end-model-0001__socials li a
     {
         font-size: 16px;
+    }
+    .acquaintance-model-0002__headline-title
+    {
+        font-size: 56px !important;
+        line-height: 58px !important;
+    }
+    .best-photo-model-0002
+    {
+        grid-template-rows: 75px 40px repeat(2, 1fr) 100px;
+    }
+    .best-photo-model-0002 .img:nth-child(3),
+    .best-photo-model-0002 .img:nth-child(4),
+    .best-photo-model-0002 .img:nth-child(5),
+    .best-photo-model-0002 .img:nth-child(6),
+    .best-photo-model-0002 .img:nth-child(7)
+    {
+        grid-column: span 10;
+        grid-row: span 2;
+    }
+    .portfolio-model-0002__gallery .img
+    {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    }
+    .end-model-0002 .img
+    {
+        min-height: 300px;
     }
 }
 
@@ -3501,6 +3704,35 @@ a
     {
         margin: 10px 0 0;
     }
+    .acquaintance-model-0002 .img
+    {
+        margin-bottom: 10px;
+    }
+    .acquaintance-model-0002__headline-title
+    {
+        font-size: 36px !important;
+        line-height: 38px !important;
+    }
+    .acquaintance-model-0002__about-descr
+    {
+        margin-bottom: 30px;
+    }
+    .acquaintance-model-0002__about-descr::before
+    {
+        bottom: 38%;
+    }
+    .best-photo-model-0002 .img
+    {
+        min-height: 200px;
+    }
+    .portfolio-model-0002__title
+    {
+        text-align: center;
+    }
+    .portfolio-model-0002 .img
+    {
+        min-height: 200px;
+    }
 }
 
 @media (max-height: 685px)
@@ -3525,7 +3757,7 @@ a
 
 @media (max-height: 800px) and (max-width: 1120px)
 {
-    .best-photo-model-overflow
+    .overflow-auto
     {
         overflow: auto;
     }
@@ -3536,6 +3768,10 @@ a
     .end-model-0001__headline-inner
     {
         margin-bottom: 0;
+    }
+    .best-photo-model-0002 .img
+    {
+        min-height: 190px;
     }
 }
 

@@ -2,6 +2,7 @@
   display: flex;
   &__about {
     position: relative;
+    flex: 0 1 60%;
     &-descr {
       margin-bottom: rem(100px);
       &::before {
@@ -16,8 +17,8 @@
     }
   }
   .img {
-    max-width: 550px;
-    width: 100%;
+    flex: 1 1 calc(40% - 10px);
     min-height: 700px;
+    height: 100%;
   }
 }

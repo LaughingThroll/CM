@@ -1,0 +1,11 @@
+.acquaintance-model-0002 {
+  &__headline-title {
+    font-size: 70px;
+    line-height: 74px;
+  }
+  &__about-descr {
+    &::before {
+      bottom: 40%;
+    }
+  }
+}

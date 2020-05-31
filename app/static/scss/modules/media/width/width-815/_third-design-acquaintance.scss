@@ -1,0 +1,13 @@
+.acquaintance-model-0002 {
+  flex-direction: column-reverse;
+  &__about-descr {
+    &::before {
+      bottom: 32%;
+      left: 0;
+    }
+  }
+  .img {
+    min-height: 300px;
+    margin-bottom: rem(50px);
+  }
+}
