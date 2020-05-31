@@ -25,3 +25,6 @@ export function raf(fn) {
     })
   })
 }
+
+let limitationsSymbols = (el, numSym) => el.textContent = el.textContent.substr(0, numSym)
+export {limitationsSymbols}

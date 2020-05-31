@@ -1,4 +1,12 @@
-.acquaintance-model-0002__headline-title {
-  font-size: 56px !important;
-  line-height: 58px !important;
+.acquaintance-model-0002 {
+  &__headline-title {
+    font-size: 56px !important;
+    line-height: 58px !important;
+  }
+  &__about-descr {
+    &::before {
+      bottom: 34%;
+      left: 0;
+    }
+  }
 }

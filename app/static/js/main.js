@@ -1,12 +1,14 @@
 import Swiper from 'swiper';
 import { mediaWidthLess815, mediaWidthMore815, mediaWidthLess1120, mediaWidthMore1120 } from './modules/breakpoints'
-import { isNull } from './utils/utils'
+import { isNull, limitationsSymbols } from './utils/utils'
 
 const currentModel = document.querySelector('.current-model__slider')
 const homePage = document.querySelector('#home')
 
 
 const modelPage0000 = document.querySelector('.model-page-0000')
+
+const jsAboutDescr = document.querySelectorAll('.js-about-descr')
 
 const configSwiper = {
   navigation: {
@@ -27,6 +29,8 @@ const configSwiper = {
 }
 
 isNull(currentModel, () => new Swiper(currentModel, configSwiper))
+
+jsAboutDescr.forEach(content => isNull(content, () => limitationsSymbols(content, 400)))
 
 
 // BREAKPOINT - WIDTH
