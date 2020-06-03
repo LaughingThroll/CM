@@ -1248,9 +1248,9 @@ a
     padding: 10px 0;
 
     cursor: pointer;
-    -webkit-transition: font-size .3s ease-in;
-         -o-transition: font-size .3s ease-in;
-            transition: font-size .3s ease-in;
+    -webkit-transition: font-size .5s ease-in;
+         -o-transition: font-size .5s ease-in;
+            transition: font-size .5s ease-in;
     text-align: center;
 
     outline: none;
@@ -1262,9 +1262,9 @@ a
     height: 0;
 
     content: '';
-    -webkit-transition: all .5s ease-in;
-         -o-transition: all .5s ease-in;
-            transition: all .5s ease-in;
+    -webkit-transition: all .7s ease-in;
+         -o-transition: all .7s ease-in;
+            transition: all .7s ease-in;
 }
 
 .current-model__pagination-dot + .current-model__pagination-dot
