@@ -1,5 +1,12 @@
 import Swiper from 'swiper';
-import { mediaWidthLess815, mediaWidthMore815, mediaWidthLess1120, mediaWidthMore1120 } from './modules/breakpoints'
+import { 
+  mediaWidthLess1120, 
+  mediaWidthLess815, 
+  mediaWidthLess600, 
+  mediaWidthMore1120, 
+  mediaWidthMore815,
+  mediaWidthMore600 
+} from './modules/breakpoints'
 import { isNull, limitationsSymbols } from './utils/utils'
 
 const currentModel = document.querySelector('.current-model__slider')
@@ -9,6 +16,10 @@ const homePage = document.querySelector('#home')
 const modelPage0000 = document.querySelector('.model-page-0000')
 
 const jsAboutDescr = document.querySelectorAll('.js-about-descr')
+
+// fourth-design
+const jsPortfolioModel0003Gallery = document.querySelector('#js-portfolio-model-0003__gallery')
+
 
 const configSwiper = {
   navigation: {
@@ -46,7 +57,12 @@ isNull(homePage, () => {
   window.addEventListener('resize', mediaWidthMore815)
 })
 
-
+isNull(jsPortfolioModel0003Gallery, () => {
+  
+  mediaWidthLess600()
+  window.addEventListener('resize', mediaWidthLess600)
+  window.addEventListener('resize', mediaWidthMore600)
+})
 // FUTURE work with touchscreen
 window.addEventListener('touchstart', function(e) {
   

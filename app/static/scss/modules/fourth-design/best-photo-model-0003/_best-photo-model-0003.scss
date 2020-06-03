@@ -1,9 +1,4 @@
 .best-photo-model-0003 {
-  .best-photo-model__headline  {
-    &-descr {
-      height: 60px;
-    }
-  }
   &__gallery {
     position: relative;
     padding: rem(20px) 0 0;
@@ -13,12 +8,13 @@
     margin-left: -10px;
     .img {
       margin-left: 10px;
-      flex: 0 0 calc(33.3333% - 10px);  
+      flex: 0 0 calc(33.3333% - 10px);
       min-height: 350px;
     }
-    &--two {
+    &-two {
       position: absolute;
-      top: 200px;
+      top: 50%;
+      transform: translateY(-50%);
       left: 0px;
       height: 300px;
       width: 100%;
@@ -26,9 +22,8 @@
       justify-content: center;
       .img {
         flex: 0 0 40%;
-        opacity: .9;  
+        opacity: 0.9;
       }
     }
-
   }
 }

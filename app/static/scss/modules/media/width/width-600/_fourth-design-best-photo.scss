@@ -1,0 +1,12 @@
+.best-photo-model-0003 {
+  &__gallery {
+    flex-direction: column;
+    .img {
+      margin-left: 0;
+      min-height: 350px;
+    }
+    &-two {
+      display: none;
+    }
+  }
+}

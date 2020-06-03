@@ -1,5 +1,5 @@
 import { show } from './animate'
-import { wrap } from '../utils/utils'
+import { wrap, isNull } from '../utils/utils'
 // index
 const modelList = Array.from(document.querySelectorAll('.model-list'))
 const headerContainerLive = document.getElementsByClassName('header')[0].children[0].children
@@ -10,6 +10,11 @@ const mainCollections = document.querySelector('.main-collections')
 // first-design
 const endModelContacts = document.querySelector('.end-model__contacts')
 const endModelImage = document.querySelector('.end-model__image')
+
+// fourth-design
+const jsPortfolioModel0003Gallery = document.getElementById('js-portfolio-model-0003__gallery') 
+
+const portfolioModel0003GalleryOne = document.querySelector('.portfolio-model-0003__gallery-one')
 
 
 // LessWidth 
@@ -55,6 +60,17 @@ export function mediaWidthLess815() {
     })
   }
 }
+
+export function mediaWidthLess600() {
+  
+  const jsPortfolioModel0003GalleryImg = Array.from(document.getElementById('js-portfolio-model-0003__gallery').children) 
+  
+  if(window.innerWidth <= 600 && jsPortfolioModel0003GalleryImg.length !== 0) {    
+      jsPortfolioModel0003GalleryImg.forEach(img => portfolioModel0003GalleryOne.insertAdjacentElement('afterbegin', img))
+      
+  }
+}
+
 // MoreWidth
 export function mediaWidthMore1120() {
   if (window.innerWidth > 1120) {
@@ -76,6 +92,20 @@ export function mediaWidthMore815() {
     headerContainer.insertAdjacentElement('beforeend', logo)
     collList.remove()
     document.getElementsByClassName('header__inner')[0].remove()
+  }
+}
+
+export function mediaWidthMore600() {
+  
+
+  if(window.innerWidth > 600 && jsPortfolioModel0003Gallery.children.length !== 4) {
+
+    Array.from(portfolioModel0003GalleryOne.children).forEach((img, i) => {
+      if (i < 4) {
+        jsPortfolioModel0003Gallery.insertAdjacentElement('afterbegin', img)
+      } 
+      
+    })
   }
 }
 

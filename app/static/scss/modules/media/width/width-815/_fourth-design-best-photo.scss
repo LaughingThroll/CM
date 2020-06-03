@@ -1,0 +1,19 @@
+.best-photo-model-0003 {
+  &__gallery {
+    margin-left: 0;
+    .img {
+      flex: 0 0 calc(50% - 10px);
+    }
+    &-two {
+      flex-direction: column;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 60%;
+      width: 100%;
+      .img {
+        margin-left: 0;
+      }
+    }
+  }
+}

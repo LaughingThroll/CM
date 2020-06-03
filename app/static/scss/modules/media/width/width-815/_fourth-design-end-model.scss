@@ -1,0 +1,12 @@
+.end-model-0003 {
+  &__headline {
+    margin-bottom: rem(20px);
+  }
+  &__contacts {
+    flex-direction: column-reverse;
+  }
+  .img {
+    margin-left: 0;
+    min-height: 400px;
+  }
+}

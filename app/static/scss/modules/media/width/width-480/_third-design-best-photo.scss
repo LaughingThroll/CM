@@ -1,3 +1,6 @@
-.best-photo-model-0002 .img {
-  min-height: 200px;
+.best-photo-model-0002 {
+  grid-template-rows: 75px 40px repeat(2, 1fr) 100px;
+  .img {
+    min-height: 200px;
+  }
 }

@@ -255,6 +255,12 @@ a {
 	flex-wrap: wrap;
 }
 
+.vertical-auto {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .model-socials {
 	li {
     display: inline-block;

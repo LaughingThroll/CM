@@ -1,7 +1,8 @@
 // ON IMPORT LINK PLEASE PRESS CTRL + CLICK
 //  ============================== HEIGHT ================================================================
-
 @media (max-height: 900px) {
+  @import "../modules/media/height/height-900/global";
+
   @import "../modules/media/height/height-900/second-design-best-photo";
 
   @import "../modules/media/height/height-900/third-design-best-photo";
@@ -25,6 +26,11 @@
   @import "../modules/media/height/height-800/third-design-best-photo";
   @import "../modules/media/height/height-800/third-design-portfolio";
   @import "../modules/media/height/height-800/third-design-end-model";
+
+  @import "../modules/media/height/height-800/fourth-design-acquintance";
+  @import "../modules/media/height/height-800/fourth-design-best-photo";
+  @import "../modules/media/height/height-800/fourth-design-portfolio";
+  @import "../modules/media/height/height-800/fourth-design-end-model";
 }
 
 @media (max-height: 730px) {
@@ -47,6 +53,9 @@
 
   @import "../modules/media/height/height-705/third-design-best-photo";
   @import "../modules/media/height/height-705/third-design-portfolio";
+
+  @import "../modules/media/height/height-705/fourth-design-acquintance";
+  @import "../modules/media/height/height-705/fourth-design-end-model";
 }
 
 @media (max-height: 685px) {
@@ -80,7 +89,7 @@
 
   @import "../modules/media/width/width-1300/second-design-acquaintance";
 
-  @import '../modules/media/width/width-1300/third-design-acquaintance';
+  @import "../modules/media/width/width-1300/third-design-acquaintance";
 }
 
 @media (max-width: 1230px) {
@@ -102,9 +111,13 @@
 
   @import "../modules/media/width/width-1120/third-design-acquaintance";
   @import "../modules/media/width/width-1120/third-design-best-photo";
+
+  @import "../modules/media/width/width-1120/fourth-design-acquintance";
 }
 @media (max-width: 850px) {
-  @import '../modules/media/width/width-850/second-design-end-model';
+  @import "../modules/media/width/width-850/second-design-end-model";
+
+  @import "../modules/media/width/width-850/fourth-design-portfolio";
 }
 @media (max-width: 815px) {
   @import "../modules/media/width/width-815/global";
@@ -126,9 +139,14 @@
   @import "../modules/media/width/width-815/third-design-best-photo";
   @import "../modules/media/width/width-815/third-design-portfolio";
   @import "../modules/media/width/width-815/third-design-end-model";
+
+  @import "../modules/media/width/width-815/fourth-design-acquintance";
+  @import "../modules/media/width/width-815/fourth-design-best-photo";
+  @import "../modules/media/width/width-815/fourth-design-portfolio";
+  @import "../modules/media/width/width-815/fourth-design-end-model";
 }
-@media (max-width: 650px) {
-  @import "../modules/media/width/width-650/third-design-best-photo";
+@media (max-width: 700px) {
+  @import "../modules/media/width/width-700/third-design-best-photo";
 }
 @media (max-width: 600px) {
   @import "../modules/media/width/width-600/global";
@@ -146,6 +164,9 @@
   @import "../modules/media/width/width-600/third-design-best-photo";
   @import "../modules/media/width/width-600/third-design-portfolio";
   @import "../modules/media/width/width-600/third-design-end-model";
+
+  @import "../modules/media/width/width-600/fourth-design-best-photo";
+  @import "../modules/media/width/width-600/fourth-design-portfolio";
 }
 
 @media (max-width: 480px) {
@@ -167,6 +188,9 @@
   @import "../modules/media/width/width-480/third-design-acquaintance";
   @import "../modules/media/width/width-480/third-design-best-photo";
   @import "../modules/media/width/width-480/third-design-portfolio";
+
+  @import "../modules/media/width/width-480/fourth-design-acquintance";
+  @import "../modules/media/width/width-480/fourth-design-end-model";
 }
 
 // DANGER NOT TOUCH
@@ -179,6 +203,7 @@
 }
 
 // ================================== MIX ===================
+
 @media (max-height: 800px) and (max-width: 1230px) {
   // start second-design-acquaintance
   .acquaintance-model-0001__top-image {
@@ -234,6 +259,7 @@
   }
   // end first-design end-model
 }
+
 @media (max-height: 705px) and (max-width: 1230px) {
   // start second-design-acquaintance
   .acquaintance-model-0001__about {
@@ -247,6 +273,27 @@
     display: none;
   }
   // end first-design end-model
+}
+
+@media (max-height: 705px) and (max-width: 880px) {
+  // start fourth-design-acquintance
+  .acquaintance-model-0003__about-list li:first-child {
+    padding-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+  // end fourth-design-acquintance
+}
+
+@media (max-height: 800px) and (max-width: 815px) {
+  // start fourth-design-best-photo
+  .best-photo-model-0003 {
+    &__gallery-two {
+      top: 30%;
+    }
+  }
+  // end fourth-design-best-photo
 }
 
 @media (max-height: 705px) and (max-width: 600px) {
