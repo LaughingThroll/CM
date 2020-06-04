@@ -3,6 +3,8 @@
   text-align: center;
   &__logo {
     svg {
+      position: relative;
+      z-index: 50;
       display: block;
       margin: 5px auto;
     }
@@ -20,9 +22,9 @@
   position: absolute;
   left: 4%;
   cursor: pointer;
-  &::before, 
+  &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: lighten($black, 10);
     height: 2px;
@@ -37,7 +39,7 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) rotate(90deg);
-    transition: transform .2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
   &--active {
     &::after {

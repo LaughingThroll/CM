@@ -89,27 +89,24 @@ a {
 	width: 60px;
 }
 
-//  попробовать это генерировать через JS сложность в том чтобы добраться до псевдоелементов getComputedStyle и нужно ли это генерировать с JS ??
 .model-page {
 	&::before,
 	&::after {
 		content: "";
 		position: absolute;
-		z-index: -1;
+		z-index: 1;
 		height: 0;
 		width: 0;
-		transition: all 3s ease;
 	}
 	&-0000 {
-		&::before {
-			background-color: $main-blue;  
-		}
+		background-color: $main-blue;
 		&::after {
 			background-color: $main-pink;
 		}
 	}
 	// colors on different design
 	&-0001 {
+		background-color: $second-green;
 		.img {
 			position: relative;
 			&::before {
@@ -123,10 +120,7 @@ a {
       }
 		}
 		&::before {
-			background-color: $second-green;
-		}
-		&::after {
-			background-color: $second-pink;	
+			background-color: $second-pink;
 		}
 	}
 	&-0002 {
@@ -138,6 +132,7 @@ a {
 		}
 	}
 	&-0003 {
+		background-color: $fourth-black;
 		color: $fourth-white;  
 		g {
 			fill: $fourth-white;
@@ -160,9 +155,6 @@ a {
 		&::before {
 			background-color: $fourth-red;
 		}
-		&::after {
-			background-color: $fourth-black;	
-		}
 		.img {
 			position: relative;
 			&::before {
@@ -176,7 +168,7 @@ a {
 			}
 		}
 	}
-	// end
+	// mode animation bg
 	&--vertical {
 		&::before,
 		&::after {
@@ -184,8 +176,6 @@ a {
 			height: 100%;
 			width: 50%;
 			animation: defaultParties 1s ease-in forwards;
-			// transition: all 3s ease;
-			
 		}
 		&::before {
 			right: 0;
@@ -202,7 +192,7 @@ a {
 			left: 0;
 			height: 50%;
 			width: 100%;
-			transition: all 3s ease;
+			transition: height 1s ease;
 		}
 		&::before {
 			bottom: 0;
@@ -212,12 +202,16 @@ a {
 			top: 0;
 		}
 	}
-	&--horizontal-mode-1 {
+	&--horizontal-mode-1, 
+	&--horizontal-mode-2 {
 		&::before,
 		&::after {
 			left: 0;
 			width: 100%;
+			transition: height 1s ease;
 		}
+	}
+	&--horizontal-mode-1 {
 		&::before {
 			bottom: 0;
 			height: 80%;
@@ -228,11 +222,6 @@ a {
 		}
 	}
 	&--horizontal-mode-2 {
-		&::before,
-		&::after {
-			left: 0;
-			width: 100%;
-		}
 		&::before {
 			bottom: 0;
 			height: 20%;
@@ -241,9 +230,9 @@ a {
 			top: 0;
 			height: 80%;
 		}
-	}
-	
+	}	
 }
+
 .phone {
 	font-size: 20px;
   color: $main-color;

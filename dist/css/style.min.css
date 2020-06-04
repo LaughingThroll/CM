@@ -359,18 +359,15 @@ a
 .model-page::after
 {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 
     width: 0;
     height: 0;
 
     content: '';
-    -webkit-transition: all 3s ease;
-         -o-transition: all 3s ease;
-            transition: all 3s ease;
 }
 
-.model-page-0000::before
+.model-page-0000
 {
     background-color: #e5eaeb;
 }
@@ -378,6 +375,11 @@ a
 .model-page-0000::after
 {
     background-color: #ede0df;
+}
+
+.model-page-0001
+{
+    background-color: #e6ffe8;
 }
 
 .model-page-0001 .img
@@ -401,11 +403,6 @@ a
 
 .model-page-0001::before
 {
-    background-color: #e6ffe8;
-}
-
-.model-page-0001::after
-{
     background-color: #ffe7e7;
 }
 
@@ -422,6 +419,7 @@ a
 .model-page-0003
 {
     color: #fbf3f3;
+    background-color: #060606;
 }
 
 .model-page-0003 g
@@ -453,11 +451,6 @@ a
 .model-page-0003::before
 {
     background-color: #720000;
-}
-
-.model-page-0003::after
-{
-    background-color: #060606;
 }
 
 .model-page-0003 .img
@@ -517,9 +510,9 @@ a
     width: 100%;
     height: 50%;
 
-    -webkit-transition: all 3s ease;
-         -o-transition: all 3s ease;
-            transition: all 3s ease;
+    -webkit-transition: height 1s ease;
+         -o-transition: height 1s ease;
+            transition: height 1s ease;
 }
 
 .model-page--horizontal::before
@@ -533,11 +526,17 @@ a
 }
 
 .model-page--horizontal-mode-1::before,
-.model-page--horizontal-mode-1::after
+.model-page--horizontal-mode-1::after,
+.model-page--horizontal-mode-2::before,
+.model-page--horizontal-mode-2::after
 {
     left: 0;
 
     width: 100%;
+
+    -webkit-transition: height 1s ease;
+         -o-transition: height 1s ease;
+            transition: height 1s ease;
 }
 
 .model-page--horizontal-mode-1::before
@@ -552,14 +551,6 @@ a
     top: 0;
 
     height: 20%;
-}
-
-.model-page--horizontal-mode-2::before,
-.model-page--horizontal-mode-2::after
-{
-    left: 0;
-
-    width: 100%;
 }
 
 .model-page--horizontal-mode-2::before
@@ -764,6 +755,9 @@ a
 
 .header__logo svg
 {
+    position: relative;
+    z-index: 50;
+
     display: block;
 
     margin: 5px auto;
@@ -1163,6 +1157,7 @@ a
 .current-model__inner
 {
     position: relative;
+    z-index: 49;
 
     padding-right: 70px;
 }
@@ -1172,9 +1167,10 @@ a
     font-size: 24px;
 
     position: absolute;
-    z-index: 10;
+    z-index: 150;
     top: -45px;
 
+    cursor: pointer;
     text-transform: lowercase;
 
     color: #a9a9a9;

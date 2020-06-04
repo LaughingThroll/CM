@@ -1,17 +1,18 @@
 import Swiper from 'swiper';
-import { 
-  mediaWidthLess1120, 
-  mediaWidthLess815, 
-  mediaWidthLess600, 
-  mediaWidthMore1120, 
+import {
+  mediaWidthLess1120,
+  mediaWidthLess815,
+  mediaWidthLess600,
+  mediaWidthMore1120,
   mediaWidthMore815,
-  mediaWidthMore600 
+  mediaWidthMore600
 } from './modules/breakpoints'
 // import onWheel from './modules/onWheel'
-import { isNull, limitationsSymbols } from './utils/utils'
+import { isNull, limitationsSymbols, raf } from './utils/utils'
 const speedSlide = 700
 
-const currentModel = document.querySelector('.current-model__slider')
+const currentModelSlide = document.querySelector('.current-model__slider')
+const currentModelItem = document.querySelectorAll('.current-model-item')
 const homePage = document.querySelector('#home')
 
 const modelPage = document.querySelector('.model-page')
@@ -22,7 +23,7 @@ const jsAboutDescr = document.querySelectorAll('.js-about-descr')
 // fourth-design
 const jsPortfolioModel0003Gallery = document.querySelector('#js-portfolio-model-0003__gallery')
 
-let currentModelSwiper
+let currentModelSlideSwiper
 const configSwiper = {
   navigation: {
     nextEl: '.current-model__arrow-next',
@@ -38,15 +39,24 @@ const configSwiper = {
     },
     bulletActiveClass: 'current-model__pagination-dot--active'
   },
-  direction: 'vertical', 
+  direction: 'vertical',
   spaceBetween: 300,
   keyboard: true,
-  // allowTouchMove: false
   allowTouchMove: false
 }
 
-isNull(currentModel, () => {
-  currentModelSwiper = new Swiper(currentModel, configSwiper)
+isNull(currentModelSlide, () => {
+  currentModelSlideSwiper = new Swiper(currentModelSlide, configSwiper)
+  currentModelSlideSwiper.on('slideChange', function () {
+    let regExp = /\s(model-page--vertical|model-page--horizontal|model-page--horizontal-mode-1|model-page--horizontal-mode-2)$/gi
+    modelPage.className = modelPage.className.replace(regExp, '')
+    switch (this.realIndex) {
+      case 0: return modelPage.classList.add('model-page--vertical')
+      case 1: return modelPage.classList.add('model-page--horizontal')
+      case 2: return modelPage.classList.add('model-page--horizontal-mode-1')
+      case 3: return modelPage.classList.add('model-page--horizontal-mode-2')
+    }
+  })
 })
 
 
@@ -68,7 +78,7 @@ isNull(homePage, () => {
 })
 
 isNull(jsPortfolioModel0003Gallery, () => {
-  
+
   mediaWidthLess600()
   window.addEventListener('resize', mediaWidthLess600)
   window.addEventListener('resize', mediaWidthMore600)
@@ -79,14 +89,22 @@ isNull(jsPortfolioModel0003Gallery, () => {
 
 isNull(modelPage, () => {
   window.addEventListener('wheel', onWheel)
+  // Mobile
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    currentModelItem.forEach(el => {
+      el.addEventListener('scroll', mobileScroll)
+    })
+  }
 })
 
 function onWheel(e) {
-
+  if (currentModelSlideSwiper.isBeginning || currentModelSlideSwiper.isEnd) {
+    removeEventListener('wheel', mobileScroll)
+  }
   if (e.deltaY >= 0) {
-      currentModelSwiper.slideNext(speedSlide, false)
+    currentModelSlideSwiper.slideNext(speedSlide, false)
   } else {
-    currentModelSwiper.slidePrev(speedSlide, false)
+    currentModelSlideSwiper.slidePrev(speedSlide, false)
   }
 
   removeEventListener('wheel', onWheel)
@@ -94,35 +112,40 @@ function onWheel(e) {
     window.addEventListener('wheel', onWheel)
   }, 1000)
 }
+// BUG
+// HAVE SMALL PROBLEM WITH SCROLL MOBILE
+// WHEN I SWIPE SLIDE AFTER SWITCHING SLIDER MUST WAIT SCROLL EVENT 
+// BUT I CANT ADD LISTENER SWIPE BECAUSE ITS HAVE WORK FOR ALL 
+// AND I DONT KNOW HOW RESOLVE ITS PROBLEM 
+function mobileScroll() {
+  if (currentModelSlideSwiper.isBeginning || currentModelSlideSwiper.isEnd) {
+    removeEventListener('scroll', mobileScroll)
+  }
+  if (this.scrollTop >= this.scrollHeight - this.clientHeight) {
+    currentModelSlideSwiper.slideNext(speedSlide, false)
+
+  } else if (this.scrollTop === 0) {
+    currentModelSlideSwiper.slidePrev(speedSlide, false)
+  }
+}
 // TODO modalHelper on space
 window.addEventListener('keydown', (e) => {
-  if (e.code === 'Space' || e.repeat) {
+  e.preventDefault()
+  if (e.code === 'Space' && e.repeat) {
     removeEventListener('wheel', onWheel)
   }
 })
 
 window.addEventListener('keyup', (e) => {
+  e.preventDefault()
   if (e.code === 'Space') {
     alert('DOING MODAL HELPER')
     window.addEventListener('wheel', onWheel)
   }
 })
-// FUTURE work with touchscreen
-let timerTouch
-window.addEventListener('touchstart', function(e) {
-  timerTouch = setTimeout(() => {
-    // currentModelSwiper.destroy()
-   
-    // currentModelSwiper.destroy()
-    // currentModelSwiper = new Swiper(currentModel, configSwiper)
-    // currentModelSwiper.init()
-    // console.log(configSwiper)
-  }, 800)
-  
-}) 
-window.addEventListener('touchmove', () => {
-  clearTimeout(timerTouch)
-})
-window.addEventListener('touchend', () => {
-  clearTimeout(timerTouch)
-})
+
+
+
+
+
+

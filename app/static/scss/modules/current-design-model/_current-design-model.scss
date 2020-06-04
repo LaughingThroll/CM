@@ -6,15 +6,17 @@
   &__inner {
     position: relative;
     padding-right: 70px;
+    z-index: 49;
   }
   &__arrow {
     position: absolute;
     top: -45px;
     font-size: 24px;
     color: $main-grey;
-    z-index: 10;
+    z-index: 150;
     text-transform: lowercase;
     outline: none;
+    cursor: pointer;
     &::before {
       content: "";
       position: absolute;
