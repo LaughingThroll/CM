@@ -2,7 +2,7 @@
 //  ============================== HEIGHT ================================================================
 @media (max-height: 900px) {
   @import "../modules/media/height/height-900/global";
-
+  
   @import "../modules/media/height/height-900/second-design-best-photo";
 
   @import "../modules/media/height/height-900/third-design-best-photo";
@@ -267,7 +267,7 @@
   }
   // end second-design-acquaintance
 }
-@media (max-height: 705px) and (max-width: 1120px) {
+@media (max-height: 705px) and (max-width: 1400px) {
   // start first-design end-model
   .end-model__image {
     display: none;
@@ -294,6 +294,7 @@
     }
   }
   // end fourth-design-best-photo
+
 }
 
 @media (max-height: 705px) and (max-width: 600px) {
@@ -310,3 +311,15 @@
   }
   // end second-design-end-model
 }
+
+
+@media (max-height: 705px) and (max-width: 815px) {
+  
+   // start first-design end-model
+   .end-model__socials {
+    margin-top: 0;
+  }
+  // end first-design end-model
+}
+
+

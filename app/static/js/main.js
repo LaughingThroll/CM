@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import {styleManager} from './modules/styleManager'
 import {
   mediaWidthLess1120,
   mediaWidthLess815,
@@ -14,6 +15,8 @@ const speedSlide = 700
 const currentModelSlide = document.querySelector('.current-model__slider')
 const currentModelItem = document.querySelectorAll('.current-model-item')
 const homePage = document.querySelector('#home')
+
+
 
 const modelPage = document.querySelector('.model-page')
 const modelPage0000 = document.querySelector('.model-page-0000')
@@ -48,8 +51,10 @@ const configSwiper = {
 isNull(currentModelSlide, () => {
   currentModelSlideSwiper = new Swiper(currentModelSlide, configSwiper)
   currentModelSlideSwiper.on('slideChange', function () {
+
     let regExp = /\s(model-page--vertical|model-page--horizontal|model-page--horizontal-mode-1|model-page--horizontal-mode-2)$/gi
     modelPage.className = modelPage.className.replace(regExp, '')
+
     switch (this.realIndex) {
       case 0: return modelPage.classList.add('model-page--vertical')
       case 1: return modelPage.classList.add('model-page--horizontal')
@@ -145,7 +150,17 @@ window.addEventListener('keyup', (e) => {
 })
 
 
+// ================================================== MdoleList ===========================================
+// import ('./modules/styleManager')
+const aboutModelListItem = Array.from(document.querySelector('.about-model-list').children)
 
+aboutModelListItem.forEach((el, index) => {
+  let paddingNumber = +el.textContent.match(/\d+/g).join('')
 
+  if (index === 0) {
+    el.style.paddingLeft = `${paddingNumber = 110}px`
+  }
+  el.style.paddingLeft = `${paddingNumber > 170 ? paddingNumber - 30 : paddingNumber}px`
 
-
+  styleManager.add(`li.about-model-list__item:nth-child(${++index})::before`, `width:${paddingNumber > 170 ? paddingNumber - 40 : paddingNumber - 10}px`)
+})

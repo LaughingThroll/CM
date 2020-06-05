@@ -288,8 +288,8 @@ a {
 }
 
 .about-model-list {
-	li {
-		// padding-left: 110px;
+	&__item {
+		
 		font-size: 16px;
 		position: relative;
 		span {
@@ -298,51 +298,15 @@ a {
 		& + li {
 			margin-top: 5px;
 		}
-		// идея такая чтобы динамически высчитывать размер линии и паддинг для li в зависимости от парметров
-		&:first-child {
-			padding-left: 110px;
-		}
 		&::before {
 			content: "";
 			position: absolute;
 			top: 51%;
 			left: 0;
+			width: 0;
 			height: 1px;
 			background-color: $black;
-		}
-		&:first-child::before {
-			
-			width: 100px;
-		}
-		&:nth-child(2) {
-			padding-left: 95px;
-		}
-		&:nth-child(2)::before {
-			width: 85px;
-		}
-		&:nth-child(3) {
-			padding-left: 70px;
-		}
-		&:nth-child(3)::before {
-			width: 60px;
-		}
-		&:nth-child(4) {
-			padding-left: 100px;
-		}
-		&:nth-child(4)::before {
-			width: 90px;
-		}
-		&:nth-child(5) {
-			padding-left: 130px;
-		}
-		&:nth-child(5)::before {
-			width: 120px;
-		}
-		&:nth-child(6) {
-			padding-left: 60px;
-		}
-		&:nth-child(6)::before {
-			width: 50px;
+			transition: all 1.5s ease-in-out;
 		}
 	}
 }
