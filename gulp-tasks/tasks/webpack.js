@@ -7,13 +7,13 @@
 module.exports = () => {
   console.log(G.path.resolve(__dirname))
   const PATH = {
-    js: G.path.resolve(__dirname, './../../app/static/js'),
-    static: G.path.resolve(__dirname, './../../app/static')
+    js: G.path.resolve(__dirname, './../../app'),
+    static: G.path.resolve(__dirname, './../../app')
   }
   const webConfig = {
     mode: 'none',
     entry: {
-      main: `${PATH.js}/main.js`
+      index: `${PATH.js}/index.js`
     },
     output: {
       filename: '[name].min.js'
@@ -47,7 +47,7 @@ module.exports = () => {
   }
 
   G.gulp.task('webpackJs', function () {
-    return G.gulp.src('app/staic/js/*.js')
+    return G.gulp.src('app/*.js')
       .pipe(G.webpack(webConfig))
       .pipe(G.gulp.dest('dist/js'))
       .pipe(G.browserSync.reload({ stream: true }))

@@ -4,7 +4,7 @@ module.exports = () => {
   global.isWatching = true
 
   G.gulp.watch('app/**/*.scss', G.gulp.parallel('sass'))
-  G.gulp.watch('app/**/*.pug', G.gulp.parallel('pug'))
-  G.gulp.watch(['app/**/*.js', '!app/js/*.min.js'], G.gulp.series('clean:js', 'webpackJs'))
+  G.gulp.watch('app/**/*.html', G.gulp.parallel('html'))
+  G.gulp.watch(['app/**/*.js', '!app/*.min.js'], G.gulp.series('clean:js', 'webpackJs'))
   })
 }

@@ -2,7 +2,7 @@
 
 module.exports = () => {
   G.gulp.task('sass', function () {
-    return G.gulp.src('app/static/scss/style.scss')
+    return G.gulp.src('app/style.scss')
 
       .pipe(G.gulpIf(G.isDevelopment, G.sourcemaps.init()))
 
