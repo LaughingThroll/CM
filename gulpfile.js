@@ -23,24 +23,16 @@ global.G = {
   csscomb: require('gulp-csscomb'),
   sourcemaps: require('gulp-sourcemaps'),
   concat: require('gulp-concat'),
-  // pug
-  // pug: require('gulp-pug'),
-  // gulpPugInheritance: require('gulp-pug-inheritance'),
   // webpack only js 
   webpack: require('webpack-stream'),
   terserPlugin: require('terser-webpack-plugin'),
-  // images
-  // gulpResponsive: require('gulp-responsive'),
-  // gulpImagemin: require('gulp-imagemin'),
-  // imageminPngquant: require('imagemin-pngquant'),
-  // imageminMozjpeg: require('imagemin-mozjpeg')
 }
 
 G.config.src.forEach(task => {
   require(task)()
 });
 
-// 'clean:images' 'export:fonts', , 'export:images' 'pug',
+
 G.gulp.task('default', G.gulp.parallel('styleLibs',  'sass', 'watch', 'browser-sync', 'html', 'webpackJs'))
-// 'export:fonts', , 'export:images'  'pug',
+
 G.gulp.task('build', G.gulp.parallel('clean', 'styleLibs', 'sass', 'html', 'webpackJs'))
