@@ -23,10 +23,11 @@
       margin-top: rem(70px);
     }
   }
-  &__images {
+  &__wrapper {
     flex:  0 1 50%;
-    min-height: 430px;
-    height: 100%;
+    &-img {
+      min-height: 430px;
+    }
   }
 }
 .acquaintance-model__about-descr {

@@ -1,7 +1,7 @@
 .portfolio-model {
   padding: rem(20px) 0 0;
   &__gallery {
-    .img {
+    &-wrapper-img {
       min-height: 220px;
     }
   }

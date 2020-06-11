@@ -3,9 +3,9 @@
   & > * {
     flex: 0 1 50%;
   }
-  .img {
+  &__wrapper-img {
     min-height: 700px;
-    height: 100%;
+    // height: 100%;
   }
   &__inner {
     margin-left: rem(30px);

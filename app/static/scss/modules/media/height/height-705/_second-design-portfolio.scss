@@ -5,7 +5,7 @@
   }
   &__gallery {
     margin-top: rem(10px);
-    .img {
+    &-wrapper-img {
       min-height: 190px;
     }
   }

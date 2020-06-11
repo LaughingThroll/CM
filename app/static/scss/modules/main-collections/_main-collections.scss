@@ -1,7 +1,7 @@
 .main-collections {
   padding: rem(40px) 0;
   position: relative;
-  overflow: hidden;
+ 
   &::before {
     content: "Catalogue";
     position: absolute;
@@ -23,7 +23,7 @@
     &:last-child {
       align-items: flex-end;
       .model-item:nth-child(2) {
-        .img {
+        .block-img {
           background-position: 100% 0;   
         }
       }

@@ -9,7 +9,7 @@ const mainCollections = document.querySelector('.main-collections')
 
 // first-design
 const endModelContacts = document.querySelector('.end-model__contacts')
-const endModelImage = document.querySelector('.end-model__image')
+const endModelItemWrapper = document.querySelector('.end-model__item-wrapper')
 
 // fourth-design
 const jsPortfolioModel0003Gallery = document.getElementById('js-portfolio-model-0003__gallery') 
@@ -20,7 +20,7 @@ const portfolioModel0003GalleryOne = document.querySelector('.portfolio-model-00
 // LessWidth 
 export function mediaWidthLess1120() {
   if (window.innerWidth <= 1120) {
-    endModelContacts.insertAdjacentElement('beforeend', endModelImage)
+    endModelContacts.insertAdjacentElement('beforeend', endModelItemWrapper)
   }
 }
 export function mediaWidthLess815() {
@@ -74,7 +74,7 @@ export function mediaWidthLess600() {
 // MoreWidth
 export function mediaWidthMore1120() {
   if (window.innerWidth > 1120) {
-    endModelContacts.insertAdjacentElement('beforebegin', endModelImage)
+    endModelContacts.insertAdjacentElement('beforebegin', endModelItemWrapper)
   }
 }
 

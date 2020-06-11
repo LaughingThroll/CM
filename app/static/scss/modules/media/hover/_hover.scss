@@ -1,0 +1,34 @@
+// .model-item {
+//   &::before {
+//     // animation: reverseSlideX 0.3s ease-out;
+//   }
+// }
+// .model-item:hover {
+//   &::before {
+//     // animation: slideX 0.5s ease-in forwards;
+//   }
+// }
+// ====================
+// .model-list {
+//   li {
+//     // animation: reverseSlideX 0.3s ease-in;
+//   }
+//   li:hover {
+//     // animation: lineSlideX 0.3s ease-in forwards;
+//   }
+// }
+// ========================
+.model-socials {
+  a:hover::before {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.block-wrapper:hover {
+    .block-img {
+      transform: scale(1.1);
+    }
+}
+
+

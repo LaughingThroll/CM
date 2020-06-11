@@ -1,7 +1,9 @@
 .end-model {
   padding: rem(20px) 0 0;
-  &__image {
-    min-height: 345px; 
-    margin-top: -45px;   
+  &__item-wrapper {
+    margin-top: -30px;   
+    &-img {
+      min-height: 345px; 
+    }
   }
 }

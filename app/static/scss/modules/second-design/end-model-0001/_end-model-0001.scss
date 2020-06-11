@@ -6,9 +6,9 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: rem(10px);
-      & > * {
-        flex: 0 1 calc(50% - 20px);
-      } 
+      &-box {
+        flex: 0 1 calc(75% - 20px);
+      }
     }
    
     &-title {
@@ -18,11 +18,15 @@
     &-descr {
       font-size: 20px;
       text-align: left;
-      margin-left: rem(50px);
+      margin: 0 rem(10px) 0 rem(50px);
     }
-    .img {
-      min-height: 400px;
+    &-wrapper {
+      flex: 0 1 calc(25% - 20px);
+      &-img {
+        min-height: 400px;
+      }
     }
+   
     
   }
   &__socials {
@@ -31,10 +35,13 @@
   }
   &__box {
     display: flex;
-    &-image {
+    &-wrapper {
       margin: -150px 0 0;
       flex: 0 1 45%;
-      min-height: 340px;
+      &-img {
+        min-height: 340px;
+      }
+     
     }
   }
 }

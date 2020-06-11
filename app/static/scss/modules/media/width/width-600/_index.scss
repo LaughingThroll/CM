@@ -9,6 +9,7 @@
 }
 // catalogue
 .main-collections {
+  overflow: hidden;
   &::before {
     top: 50%;
     left: 50%;

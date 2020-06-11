@@ -1,5 +1,5 @@
-mixin model-list-item(num, name)
-  li
+mixin model-list-item(num, name, id)
+  li(data-animation_arrow_id=id)
     a(href="#")
       span.model-list__number.coll-number Coll.№#{num}
       span.model-list__title #{name} 

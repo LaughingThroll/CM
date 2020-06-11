@@ -4,11 +4,14 @@
   }
   &__item {
     flex: 0 1 calc(50% - 20px);
+    &-wrapper {
+      margin-top: 10px;
+      &-img {
+        min-height: 320px;
+      }
+    }
   }
-  &__image {
-    margin-top: 10px;
-    min-height: 320px;
-  }
+  
   &__socials-list {
     li + li {
       margin-left: 5px;

@@ -21,7 +21,7 @@ h2 {
 .about-model-list {
   li {
     &:first-child {
-      padding-left: 0;
+      padding-left: 0 !important;
       &::before {
         display: none;
       }

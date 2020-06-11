@@ -1,13 +1,13 @@
 .acquaintance-model-0001 {
   &__top {
    position: relative;
-    &-image {
-      position: absolute;
-      top: 100px;
-      left: 70px;
+    &-wrapper {
       margin: 0;
-      min-height: 300px;
+      width: 100%;
       flex: 1 1 auto;
+    }
+    &-img {
+      min-height: 300px;
       background-position: 0 50%;
     }
   }
@@ -26,7 +26,7 @@
     &-list {
       flex: 1 1 35%;
     }
-    &-image {
+    &-wrapper {
       display: none;
     }
     &-descr {

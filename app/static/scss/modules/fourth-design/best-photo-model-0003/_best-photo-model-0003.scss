@@ -6,10 +6,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: -10px;
-    .img {
+    &-wrapper {
       margin-left: 10px;
       flex: 0 0 calc(33.3333% - 10px);
-      min-height: 350px;
     }
     &-two {
       position: absolute;
@@ -20,10 +19,13 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      .img {
+      &-wrapper {
         flex: 0 0 40%;
         opacity: 0.9;
       }
+    }
+    .block-img {
+      min-height: 350px;
     }
   }
 }

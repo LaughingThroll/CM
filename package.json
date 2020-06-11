@@ -33,8 +33,6 @@
     "gulp-pug-inheritance": "^0.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-responsive": "^3.0.1",
-    "gulp-rev": "^9.0.0",
-    "gulp-rev-rewrite": "^3.0.3",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "imagemin-mozjpeg": "^8.0.0",

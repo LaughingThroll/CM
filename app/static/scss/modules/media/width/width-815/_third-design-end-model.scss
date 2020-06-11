@@ -1,7 +1,9 @@
 .end-model-0002 {
   flex-direction: column;
-  .img {
-    min-height: 500px;
+  &__wrapper {
     margin-bottom: rem(10px);
+    &-img {
+      min-height: 500px;
+    }
   }
 }

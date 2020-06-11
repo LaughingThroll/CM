@@ -4,9 +4,12 @@
       text-align: center;
     }
     &__gallery {
-      .img {
+      &-wrapper {
         margin-bottom: 5px;
-        min-height: 250px;
+        &-img {
+          min-height: 250px;
+        }
+        
       }
     }
   }

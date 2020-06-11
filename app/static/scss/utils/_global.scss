@@ -75,11 +75,19 @@ a {
 	padding: 0 15px;
 	margin: 0 auto;
 }
-.img {
-	background-size: cover;
-	background-position: top center;
-	background-repeat: no-repeat;
-	width: 100%;
+
+.block {
+	&-wrapper {
+		overflow: hidden;
+	}
+	&-img {
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		width: 100%;
+		transition: all .5s ease-in;
+	}
+
 }
 .coll-number {
 	color: $main-grey;
@@ -107,7 +115,7 @@ a {
 	// colors on different design
 	&-0001 {
 		background-color: $second-green;
-		.img {
+		.block-img {
 			position: relative;
 			&::before {
         content: "";
@@ -155,7 +163,7 @@ a {
 		&::before {
 			background-color: $fourth-red;
 		}
-		.img {
+		.block-img {
 			position: relative;
 			&::before {
 				content: "";
@@ -271,10 +279,7 @@ a {
         background-color: $main-color;
         transition: all 0.3s ease-out;
       }
-      &:hover::before {
-        left: 0;
-        width: 100%;
-      }
+     
     }
   }
 }

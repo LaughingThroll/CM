@@ -1,13 +1,16 @@
 .acquaintance-model-0001 {
   &__top {
-    &-image {
+    &-img {
       min-height: 410px;
     }
   }
   &__about {
-    &-image {
-      min-height: 390px;
+    &-wrapper {
       margin: -210px 100px 0 0;
+    }
+    &-img {
+      min-height: 390px;
+     
     }
   }
 

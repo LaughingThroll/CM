@@ -5,10 +5,13 @@
   }
   &__gallery {
     margin-top: rem(20px);
-    .img {
+    &-wrapper {
       margin-bottom: 3px;
       flex: 0 1 calc(25% - 3px);
-      min-height: 280px;
+      &-img {
+        min-height: 280px;
+      }
+     
     }
   }
 }

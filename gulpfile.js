@@ -14,8 +14,6 @@ global.G = {
   browserSync: require('browser-sync'),
   del: require('del'),
   path: require('path'),
-  gulpRev: require('gulp-rev'),
-  gulpRevRewrite: require('gulp-rev-rewrite'),
   // scss or sass or stylus
   sass: require('gulp-sass'),
   autoprefixer: require('gulp-autoprefixer'),

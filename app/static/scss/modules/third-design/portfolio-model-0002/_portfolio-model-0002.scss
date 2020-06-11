@@ -2,8 +2,10 @@
   &__title {
     margin-bottom: rem(10px);
   }
-  .img {
-    min-height: 300px;
+  &__gallery-wrapper {
     flex: 0 1 25%;
+    &-img {
+      min-height: 300px;
+    }
   }
 }

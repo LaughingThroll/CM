@@ -2,7 +2,7 @@
 //  ============================== HEIGHT ================================================================
 @media (max-height: 900px) {
   @import "../modules/media/height/height-900/global";
-  
+
   @import "../modules/media/height/height-900/second-design-best-photo";
 
   @import "../modules/media/height/height-900/third-design-best-photo";
@@ -134,6 +134,7 @@
   @import "../modules/media/width/width-815/second-design-acquintance";
   @import "../modules/media/width/width-815/second-design-best-photo";
   @import "../modules/media/width/width-815/second-design-portfolio";
+  @import "../modules/media/width/width-815/second-design-end-model";
 
   @import "../modules/media/width/width-815/third-design-acquaintance";
   @import "../modules/media/width/width-815/third-design-best-photo";
@@ -157,8 +158,6 @@
 
   @import "../modules/media/width/width-600/first-design-best-model";
   @import "../modules/media/width/width-600/first-design-portfolio";
-
-  @import "../modules/media/width/width-600/second-design-end-model";
 
   @import "../modules/media/width/width-600/third-design-acquaintance";
   @import "../modules/media/width/width-600/third-design-best-photo";
@@ -206,12 +205,17 @@
 
 @media (max-height: 800px) and (max-width: 1230px) {
   // start second-design-acquaintance
-  .acquaintance-model-0001__top-image {
-    top: 15px;
-    left: 0;
-    margin-right: 25px;
-    min-height: 250px;
+  .acquaintance-model-0001__top {
+    &-wrapper {
+      top: 15px;
+      left: 0;
+      margin-right: 25px;
+    }
+    &-img {
+      min-height: 250px;
+    }
   }
+
   // end second-design-acquaintance
 }
 @media (max-height: 800px) and (max-width: 1120px) {
@@ -236,7 +240,7 @@
   // end second-design-end-model
 
   // start third-design-best-photo
-  .best-photo-model-0002 .img {
+  .best-photo-model-0002__wrapper-img {
     min-height: 190px;
   }
   // end third-design-best-photo
@@ -254,7 +258,7 @@
   .end-model__item {
     height: 100%;
   }
-  .end-model__image {
+  .end-model__item-wrapper-img {
     min-height: 220px;
   }
   // end first-design end-model
@@ -269,7 +273,7 @@
 }
 @media (max-height: 705px) and (max-width: 1400px) {
   // start first-design end-model
-  .end-model__image {
+  .end-model__image-wrapper-img {
     display: none;
   }
   // end first-design end-model
@@ -294,7 +298,6 @@
     }
   }
   // end fourth-design-best-photo
-
 }
 
 @media (max-height: 705px) and (max-width: 600px) {
@@ -312,14 +315,14 @@
   // end second-design-end-model
 }
 
-
 @media (max-height: 705px) and (max-width: 815px) {
-  
-   // start first-design end-model
-   .end-model__socials {
+  // start first-design end-model
+  .end-model__socials {
     margin-top: 0;
   }
   // end first-design end-model
 }
-
-
+// hover Effect
+@media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+  @import "../modules/media/hover/hover";
+}

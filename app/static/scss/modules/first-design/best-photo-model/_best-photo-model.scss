@@ -15,32 +15,44 @@
   // Maybe need rebuild
   &__gallery {
     position: relative;
-    .img {
+    &-wrapper {
       position: absolute;
       width: 100%;
       &:first-child {
         right: 0;
         top: -50px;
         max-width: 300px;
-        min-height: 400px;
+        .best-photo-model__gallery-wrapper-img {
+          min-height: 400px;
+        }
+       
       }
       &:nth-child(2) {
         right: 250px;
         top: -20px;
         max-width: 300px;
-        min-height: 450px;
+        .best-photo-model__gallery-wrapper-img {
+          min-height: 450px;
+        }
+       
       }
       &:nth-child(3) {
         top: 50px;
         right: 500px;
         max-width: 500px;
-        min-height: 300px;
+        .best-photo-model__gallery-wrapper-img {
+          min-height: 300px;
+        }
+       
       }
       &:nth-child(4) {
         left: 0;
         top: 0;
         max-width: 400px;
-        min-height: 400px;
+        .best-photo-model__gallery-wrapper-img {
+          min-height: 400px;
+        }
+        
       }
     }
   }

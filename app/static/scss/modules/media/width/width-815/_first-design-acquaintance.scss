@@ -13,9 +13,10 @@
     display: flex;
     flex-direction: column-reverse;
   }
-  .img {
-    min-height: 300px;
-  }
+}
+
+.acquaintance-model__wrapper-img {
+  min-height: 300px;
 }
 
 .acquaintance-model__about-descr {

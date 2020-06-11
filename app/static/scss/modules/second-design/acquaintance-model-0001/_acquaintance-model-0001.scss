@@ -3,11 +3,12 @@
   flex-direction: column;
   &__top {
     display: flex;
-   
-    &-image {
+    &-wrapper {
       margin: -100px 0 0 100px;
+      flex: 0 1 calc(35% - 20px);
+    }
+    &-img {
       min-height: 500px;
-      flex: 0 1 calc(35% - 20px)
     }
   }
   &__headline {
@@ -33,11 +34,12 @@
       flex: 0 1 calc(35% - 20px);
       margin-top: rem(30px);
     }
-    &-image {
+    &-wrapper {
       flex: 0 1 calc(35% - 20px);
-      min-height: 500px;
       margin: -300px 100px 0 0;
-      height: 100%;
+    }
+    &-img {
+      min-height: 500px;
     }
     &-descr {
       flex: 1 1 auto;

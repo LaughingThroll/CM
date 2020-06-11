@@ -1,7 +1,10 @@
 .portfolio-model__gallery {
-  .img {
+  &-wrapper{
     flex: 1 1 100%;
     margin-bottom: 5px;
-    min-height: 350px;
+    &-img {
+      min-height: 350px;
+    }
+   
   }
 }

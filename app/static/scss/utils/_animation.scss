@@ -19,15 +19,22 @@
 
 }
 
-
-
-
 @keyframes defaultParties {
   to {
     transform: translateX(0);
   }
-}  
+}
 
+// @function slideX(, to) {
+//   @keyframes a {
+//     from {
+
+//     }
+//     to {
+
+//     }
+//   }
+// }
 @keyframes showSmallSlideX {
   0% {
     transform: translateX(-100%);
@@ -48,5 +55,59 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes slideX {
+  0% {
+    transform: translateX(0)
+  }
+  80% {
+    transform: translateX(30px)
+  }
+  100% {
+    transform: translateX(20px)
+  }
+  
+}
+
+.slideX {
+  animation: slideX .5s easy-in forwards !important; 
+}
+
+.slideXBefore {
+  &::before {
+    content: '';
+    animation: slideX .5s easy-in forwards !important;
+  }
+}
+
+// @keyframes lineSlideX {
+//   0% {
+//     transform: translateX(0)
+//   }
+//   100% {
+//     transform: translateX(20px)
+//   }
+  
+// }
+
+@keyframes reverseSlideX {
+  0% {
+    transform: translateX(20px)
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.reverseSlideX {
+  animation: reverseSlideX .3s ease-out;
+}
+
+.reverseSlideXBefore {
+  &::before {
+    content: '';
+    animation: reverseSlideX .3s ease-out;
   }
 }
