@@ -1,37 +1,39 @@
 .see-link {
   font-size: 24px;
   color: $main-grey;
-  transition: all 3s ease-in;
   position: relative;
+  &::before {
+    content: "";
+    width: 0;
+    transition: width 0.5s ease-in;
+  }
+  &--close::before,
+  &--open::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 0;
+    height: 2px;
+    background-color: $main-grey;
+  }
   &--close {
-    
     &::before {
-      content: '';
-      position: absolute;
-      top: 45%;
-      left: 0;
       width: 110%;
-      height: 2px;
-      background-color: $main-grey;
-      transition: all 3s ease-in-out;
+      transition: width 1s ease-in-out;
     }
   }
   &--open {
     transform: translateX(-50%);
     &::before {
-      content: '';
-      position: absolute;
-      top: 45%;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: $main-grey;
-      transition: all 3s ease-in-out;
+      animation: slideReverseWidthX 1.5s ease-out forwards;
     }
   }
 }
 
 .contacts-link {
   font-size: 16px;
-  color: $main-color; 
-}  
+  color: $main-color;
+  position: relative;
+  padding: 3px;
+  @include beforeAnimationMain; 
+}

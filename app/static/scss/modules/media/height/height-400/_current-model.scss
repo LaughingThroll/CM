@@ -1,0 +1,21 @@
+.current-model {
+  &__pagination {
+    &-dot {
+      padding: 5px 0;
+      &.current-model__pagination-dot--active,
+      &:first-child.current-model__pagination-dot--active,
+      &:last-child.current-model__pagination-dot--active {
+        margin: 0;
+      }
+      &--active {
+        font-size: 30px;
+        &::before,
+        &::after {
+          display: none;
+          bottom: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 // ON IMPORT LINK PLEASE PRESS CTRL + CLICK
 //  ============================== HEIGHT ================================================================
+
 @media (max-height: 900px) {
   @import "../modules/media/height/height-900/global";
 
@@ -73,9 +74,12 @@
 }
 
 @media (max-height: 500px) {
-  @import "../modules/media/height/height-600/current-model";
+  @import "../modules/media/height/height-500/current-model";
 }
 
+@media (max-height: 400px) {
+  @import '../modules/media/height/height-400/current-model';
+} 
 //========================================= WIDTH ================================================================
 @media (max-width: 1400px) {
   @import "../modules/media/width/width-1400/second-design-acquaintance";

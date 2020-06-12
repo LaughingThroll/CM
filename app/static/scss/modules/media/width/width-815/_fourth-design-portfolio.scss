@@ -1,8 +1,6 @@
 .portfolio-model-0003 {
-  &__gallery {
-    .img {
-      min-height: 200px;
-    }
+  .block-img {
+    min-height: 200px;
   }
   &__box {
     margin-left: rem(20px);

@@ -1,5 +1,6 @@
 .footer {
-  z-index: 12;
+  position: relative;
+  z-index: 101;
   text-align: center;
   &__inner {
     display: flex;
@@ -20,7 +21,8 @@
       top: 50%;
       right: 0;
       height: 1px;
-      width: 110px;
+      max-width: 110px;
+      animation: slideWidthX 1.5s ease-in forwards;
       background-color: $main-color;
     }
   }

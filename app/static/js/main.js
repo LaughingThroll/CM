@@ -21,6 +21,7 @@ const modelListLi = Array.from(document.getElementsByClassName('model-list')).re
 
 const modelPage = document.querySelector('.model-page')
 const modelPage0000 = document.querySelector('.model-page-0000')
+const seeLink = document.querySelector('.see-link')
 
 const jsAboutDescr = document.querySelectorAll('.js-about-descr')
 
@@ -170,9 +171,6 @@ isNull(document.querySelector('.about-model-list'), () => {
   })
 })
 // ==================================================== AnimationArrow =====================================
-// const arrAnimationArrow = [modelItem, modelListLi]
-
-
 
 arrAnimationArrow.forEach(parent => {
   isNull(parent, () => {
@@ -203,6 +201,17 @@ arrAnimationArrow.forEach(parent => {
   })
 })
 
+
+// =================================================== AnimationSeeLink ===========================
+
+
+if (homePage) {
+  seeLink.classList.remove('see-link--open')
+  seeLink.classList.add('see-link--close')
+} else {
+  seeLink.classList.remove('see-link--close')
+  seeLink.classList.add('see-link--open')
+}
 
 
 

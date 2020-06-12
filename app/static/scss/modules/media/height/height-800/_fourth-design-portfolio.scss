@@ -3,14 +3,14 @@
     margin-bottom: rem(16px);
   }
   &__gallery {
-    .img {
-      min-height: 220px;
-    }
-    &-one .img:nth-child(2) {
+    &-one-wrapper-img:nth-child(2) {
       background-position: 0 45%;
     }
   }
-  &__box .portfolio-model-0003__gallery .img:nth-child(4) {
+  .block-img {
+    min-height: 220px;
+  }
+  &__box-wrapper-img:nth-child(4) {
     background-position: 0 40%;
   }
 }

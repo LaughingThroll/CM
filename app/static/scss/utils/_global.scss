@@ -79,6 +79,7 @@ a {
 .block {
 	&-wrapper {
 		overflow: hidden;
+		cursor: pointer;
 	}
 	&-img {
 		background-size: cover;
@@ -269,16 +270,7 @@ a {
       padding: 3px;
       font-size: 18px;
       position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 2px;
-        right: 0;
-        height: 1px;
-        width: 0;
-        background-color: $main-color;
-        transition: all 0.3s ease-out;
-      }
+      @include beforeAnimationMain;
      
     }
   }

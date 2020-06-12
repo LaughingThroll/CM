@@ -22,7 +22,8 @@
       position: absolute;
       top: 50%;
       height: 1px;
-      width: 72px;
+      max-width: 72px;
+      animation: slideWidthX 1.5s ease-in forwards;
       background-color: $main-grey;
     }
     &-prev {
@@ -109,16 +110,4 @@
       }
     }
   }
-  // span {
-  //   position: relative;
-  //   &::before {
-  //     content: '';
-  //     position: absolute;
-  //     bottom: -3px;
-  //     left: 0;
-  //     height: 1px;
-  //     width: 100%;
-  //     background-color: $main-grey;
-  //   }
-  // }
 }

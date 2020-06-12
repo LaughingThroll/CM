@@ -10,11 +10,13 @@
     &-descr {
       margin: rem(20px) 0 rem(20px);
     }
-  }
-  .img {
-    margin-left: rem(20px);
-    flex: 0 1 60%;
-    min-height: 550px;
-    background-position: 0 50%;
+    &-wrapper {
+      margin-left: rem(20px);
+      flex: 0 1 60%;
+      &-img {
+        min-height: 550px;
+        background-position: 0 50%;
+      }
+    }
   }
 }

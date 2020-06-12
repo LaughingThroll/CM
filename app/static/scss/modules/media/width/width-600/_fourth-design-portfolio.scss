@@ -9,20 +9,25 @@
   &__title {
     margin-bottom: 10px;
   }
-  &__gallery {
-    .img {
-      flex: 0 1 100%;
-      &:nth-child(1) {
+  .block-wrapper {
+    flex: 0 1 100%;
+    &:nth-child(1) {
+      .block-img {
         background-position: 0 25%;
       }
-      &:nth-child(2) {
+    }
+    &:nth-child(2) {
+      .block-img {
         background-position: 0 0;
       }
-      &:nth-child(6) {
+    }
+    &:nth-child(6) {
+      .block-img {
         background-position: 0 35%;
       }
     }
   }
+
   &__box {
     margin-left: 0;
   }
