@@ -1,3 +1,24 @@
+function noop() {}
+
+function _createModalFooter(buttons = []) {
+  if (buttons.length === 0) {
+    return document.createElement('div')
+  }
+  const wrap = document.createElement('div')
+  wrap.classList.add('modal-footer')
+
+  buttons.forEach(btn => {
+    const $btn = document.createElement('button')
+    $btn.textContent = btn.text
+    $btn.setAttribute('class', `${btn.className}`)
+    $btn.onclick = btn.handler || noop
+    wrap.appendChild($btn)
+  })
+
+
+  return wrap
+}
+
 export default function _createModal(options) {
   const modal = document.createElement('div')
   modal.classList.add('modal')
@@ -6,22 +27,22 @@ export default function _createModal(options) {
     <div class="modal-window">
       <div class="modal-header">
         <div class="modal-header__title">
-          My Title 
+          ${options.title || 'title'} 
         </div>
-        <div class="modal-header__close">&times;</div>
+        ${ options.closable ? ' <div class="modal-header__close"></div>' : ''}
       </div>
       <div class="modal-body">
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat corporis ut blanditiis. Est, voluptate quibusdam quidem aliquid perferendis similique error porro iste assumenda eius aperiam expedita maxime, eveniet nesciunt cum? Nulla non hic, ipsum ipsam porro possimus nam inventore quam eum in. Qui accusamus laudantium quasi, incidunt nostrum magni est.</p>
+        <p>${options.content || 'Empty content'}</p>
 
       </div>
-      <div class="modal-footer">
-        <button class="btn btn--succses modal-footer__btn">Ok</button>
-        <button class="btn btn--cancel modal-footer__btn">Cancel</button>
-      </div>
+    
     </div> 
     </div>
   `)
+  const footer = _createModalFooter(options.footerButtons)
+  
+  modal.querySelector('.modal-body').insertAdjacentElement('afterend', footer)
   document.body.appendChild(modal)
   return modal
 }

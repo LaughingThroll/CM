@@ -71,7 +71,6 @@ p
 
 .modal-window
 {
-    width: 600px;
     padding: 20px 10px;
 
     -webkit-transition: all .5s ease-in;
@@ -154,7 +153,41 @@ p
 
 .modal-header__close
 {
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+
     cursor: pointer;
+}
+
+.modal-header__close::before,
+.modal-header__close::after
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 100%;
+
+    content: '';
+
+    background-color: #000;
+}
+
+.modal-header__close::before
+{
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.modal-header__close::after
+{
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .modal-body
