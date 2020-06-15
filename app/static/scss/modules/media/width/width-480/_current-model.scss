@@ -6,7 +6,7 @@
 }
 .current-model__arrow {
   &::before {
-    width: 32px;
+    max-width: 32px;
   }
 }
 .current-model__arrow-prev {

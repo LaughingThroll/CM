@@ -1,13 +1,18 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper'
+import Swal from 'sweetalert2'
 import { styleManager } from './modules/styleManager'
 import {
   mediaWidthLess1120,
   mediaWidthLess815,
   mediaWidthLess600,
+  mediaHeightLess705,
   mediaWidthMore1120,
   mediaWidthMore815,
-  mediaWidthMore600
+  mediaWidthMore600,
+  mediaHeightMore705
+  
 } from './modules/breakpoints'
+
 // import onWheel from './modules/onWheel'
 import { isNull, limitationsSymbols, raf } from './utils/utils'
 const SPEEDSLIDE = 700
@@ -91,21 +96,38 @@ isNull(jsPortfolioModel0003Gallery, () => {
   window.addEventListener('resize', mediaWidthMore600)
 })
 
+
 const arrAnimationArrow = [modelItem, modelListLi]
 
 // ========================================= Mobile ==================================
 
 isNull(modelPage, () => {
-  // ------------------------------------------ WHEEl -------------------
-  window.addEventListener('wheel', onWheel)
-
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
     currentModelItem.forEach(el => {
       el.addEventListener('scroll', mobileScroll)
     })
+    
+    window.removeEventListener('resize', mediaHeightLess705)
+    mediaHeightMore705()
+  } else {
+    window.addEventListener('resize', mediaHeightLess705)
+    window.addEventListener('resize', mediaHeightMore705)
+    mediaHeightLess705()
+    
+    
   }
+  if (Swal.isVisible()) {
+    window.removeEventListener('wheel', onWheel)
+  } 
 
-
+  Swal.update({
+    onClose() {
+      window.addEventListener('wheel', onWheel)
+    }
+  })
+  
+ 
+  
   function onWheel(e) {
     if (currentModelSlideSwiper.isBeginning || currentModelSlideSwiper.isEnd) {
       removeEventListener('wheel', mobileScroll)
@@ -137,7 +159,7 @@ isNull(modelPage, () => {
       currentModelSlideSwiper.slidePrev(SPEEDSLIDE, false)
     }
   }
-  // TODO modalHelper on space
+
   window.addEventListener('keydown', (e) => {
     e.preventDefault()
     if (e.code === 'Space' && e.repeat) {
@@ -148,7 +170,6 @@ isNull(modelPage, () => {
   window.addEventListener('keyup', (e) => {
     e.preventDefault()
     if (e.code === 'Space') {
-      alert('DOING MODAL HELPER')
       window.addEventListener('wheel', onWheel)
     }
   })
@@ -212,6 +233,5 @@ if (homePage) {
   seeLink.classList.remove('see-link--close')
   seeLink.classList.add('see-link--open')
 }
-
 
 

@@ -76,9 +76,12 @@
 @media (max-height: 500px) {
   @import "../modules/media/height/height-500/current-model";
 }
-
+@media (max-height: 450px) {
+ 
+}
 @media (max-height: 400px) {
   @import '../modules/media/height/height-400/current-model';
+  
 } 
 //========================================= WIDTH ================================================================
 @media (max-width: 1400px) {
@@ -103,7 +106,7 @@
 
 @media (max-width: 1120px) {
   @import "../modules/media/width/width-1120/global";
-
+  @import '../modules/media/width/width-1120/modal';
   @import "../modules/media/width/width-1120/index";
 
   @import "../modules/media/width/width-1120/first-design-acquaintance";
@@ -175,6 +178,8 @@
 @media (max-width: 480px) {
   @import "../modules/media/width/width-480/global";
 
+  @import '../modules/media/width/width-480/modal';
+ 
   @import "../modules/media/width/width-480/index";
 
   @import "../modules/media/width/width-480/current-model";

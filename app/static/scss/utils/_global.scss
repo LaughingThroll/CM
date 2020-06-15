@@ -98,6 +98,7 @@ a {
 	width: 60px;
 }
 
+
 .model-page {
 	&::before,
 	&::after {
@@ -176,7 +177,23 @@ a {
 				background-color: rgba($black, .5);
 			}
 		}
+		& + .swal2-container .swal2-popup {
+			background-color: $fourth-black !important;
+			.swal2-title,
+			.swal2-content {
+				color: $fourth-white !important;
+			}
+			.swal2-icon.swal2-warning {
+				color: $fourth-red !important;
+				border-color: $fourth-red !important;
+			}
+			.swal2-styled {
+				background-color: $fourth-red !important;
+			} 
+		}
 	}
+
+
 	// mode animation bg
 	&--vertical {
 		&::before,

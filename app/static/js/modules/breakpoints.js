@@ -1,5 +1,6 @@
 import { show } from './animate'
-import { wrap, isNull } from '../utils/utils'
+import Swal from 'sweetalert2'
+import { wrap } from '../utils/utils'
 // index
 const modelList = Array.from(document.querySelectorAll('.model-list'))
 const headerContainerLive = document.getElementsByClassName('header')[0].children[0].children
@@ -12,7 +13,7 @@ const endModelContacts = document.querySelector('.end-model__contacts')
 const endModelItemWrapper = document.querySelector('.end-model__item-wrapper')
 
 // fourth-design
-const jsPortfolioModel0003Gallery = document.getElementById('js-portfolio-model-0003__gallery') 
+const jsPortfolioModel0003Gallery = document.getElementById('js-portfolio-model-0003__gallery')
 
 const portfolioModel0003GalleryOne = document.querySelector('.portfolio-model-0003__gallery-one')
 
@@ -38,7 +39,7 @@ export function mediaWidthLess815() {
 
     const collList = document.getElementsByClassName('coll-list')[0]
     modelList.forEach(el => {
-      
+
       collList.insertAdjacentElement('afterbegin', el)
     })
     // animation collList
@@ -62,12 +63,12 @@ export function mediaWidthLess815() {
 }
 
 export function mediaWidthLess600() {
-  
-  const jsPortfolioModel0003GalleryImg = Array.from(document.getElementById('js-portfolio-model-0003__gallery').children) 
-  
-  if(window.innerWidth <= 600 && jsPortfolioModel0003GalleryImg.length !== 0) {    
-      jsPortfolioModel0003GalleryImg.forEach(img => portfolioModel0003GalleryOne.insertAdjacentElement('afterbegin', img))
-      
+
+  const jsPortfolioModel0003GalleryImg = Array.from(document.getElementById('js-portfolio-model-0003__gallery').children)
+
+  if (window.innerWidth <= 600 && jsPortfolioModel0003GalleryImg.length !== 0) {
+    jsPortfolioModel0003GalleryImg.forEach(img => portfolioModel0003GalleryOne.insertAdjacentElement('afterbegin', img))
+
   }
 }
 
@@ -96,16 +97,35 @@ export function mediaWidthMore815() {
 }
 
 export function mediaWidthMore600() {
-  
 
-  if(window.innerWidth > 600 && jsPortfolioModel0003Gallery.children.length !== 4) {
+
+  if (window.innerWidth > 600 && jsPortfolioModel0003Gallery.children.length !== 4) {
 
     Array.from(portfolioModel0003GalleryOne.children).forEach((img, i) => {
       if (i < 4) {
         jsPortfolioModel0003Gallery.insertAdjacentElement('afterbegin', img)
-      } 
-      
+      }
+
     })
+  }
+}
+// Less Height
+
+export function mediaHeightLess705() {
+  if (window.innerHeight <= 705 && !Swal.isVisible()) {
+    Swal.fire({
+      title: 'Привет ти должен это знать',
+      text: 'Если у тебя появился вертикальная полоса тогда зажми пробел и листай чтобы просмотреть контент',
+      icon: 'warning',
+      confirmButtonText: 'Я все понял нет проблем'
+    })
+  }
+}
+
+// // More Height
+export function mediaHeightMore705() {
+  if (window.innerHeight > 705 && Swal.isVisible()) {
+    Swal.close()
   }
 }
 
