@@ -11,6 +11,9 @@ module.exports = () => {
       .pipe(G.gulpIf(!G.isDevelopment, G.gulpResponsive({
         '**/*': [
           {
+            width: 100 * 1 + '%'
+          },
+          {
             width: 100 * 1 + '%',
             rename: { suffix: '@1x' }
           },
@@ -53,6 +56,10 @@ module.exports = () => {
       .pipe(faviconFilter)
       .pipe(G.gulpIf(!G.isDevelopment, G.gulpResponsive({
         '**/favicon.png': [
+          {
+            width: 100 + '%',
+            rename: 'favicon.png'
+          },
           {
             width: 16,
             rename: 'favicon-16x16.png'
@@ -114,7 +121,7 @@ module.exports = () => {
           compressionLevel: 8,
         })))
       .pipe(faviconFilter.restore)  
-      .pipe(G.gulp.dest('dist/images/'))
+      .pipe(G.gulp.dest('dist/images/favicon'))
 
   })
 }    
